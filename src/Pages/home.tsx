@@ -1,17 +1,19 @@
 import React from 'react';
 import '../App.css';
 import '../App';
+import Navbar from '../Components/navbar';;
 
 function Home() {
   return (
     <div className="Home">
-      <header className="Home-header">
-        <p>
-          Welcome to Home / Landing
-        </p>
+        <Navbar/>
+        <header className="Home-header">
+            <p>
+                Welcome to Home / Landing
+            </p>
+        </header>
+         {/* bootstrap succeed */}
         <button className="btn btn-primary">Click me</button> 
-        {/* bootstrap succeed */}
-      </header>
     </div>
   );
 }
