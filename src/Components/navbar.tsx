@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css'; // Ensure this path is correct
-
+import {Link} from "react-router-dom"
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -14,10 +14,10 @@ function Navbar() {
       </button>
 
       <div className={`sidebar ${isSidebarOpen ? 'show' : ''}`} style={{width: isSidebarOpen ? '250px' : '0', transition: 'width 0.3s'}}>
-        <a href="#" className="sidebar-link">Home</a>
-        <a href="#" className="sidebar-link">Place</a>
-        <a href="#" className="sidebar-link">Event</a>
-        <a href="#" className="sidebar-link">About</a>
+        <Link to="/Home" className="sidebar-link"> Home </Link>
+        <Link to="/Place" className="sidebar-link"> Place </Link>
+        <Link to="/About" className="sidebar-link"> About </Link>
+        <Link to="/Event" className="sidebar-link"> Event </Link>
       </div>
     </div>
   );
