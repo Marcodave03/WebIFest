@@ -40,14 +40,13 @@
 }
 
 /* Nav */
-
 .Navbar {
   display: flex;
   align-items: center;
 }
 
 .navbar-toggler {
-  background-color: white; /* Change background color to white */
+  background-color: white; 
   border: none;
   padding: 10px;
   font-size: 20px;
@@ -81,10 +80,13 @@
 .navbar-toggler:not(.open):not(:hover) .toggler-icon {
   padding: 4px; 
 }
+
 .navbar-toggler.open .toggler-icon {
   color: black; 
   transform: rotate(180deg);
 }
+
+
 
 
 .sidebar {
