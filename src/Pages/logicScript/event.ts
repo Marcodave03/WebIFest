@@ -1,8 +1,7 @@
+// setupThree.ts
 import * as THREE from 'three';
-// Import the GLTFLoader
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-export const initializeThree = (canvasId: string, modelPath: string) => {
+export const initializeThree = (canvasId: string) => {
   const canvas = document.getElementById(canvasId) as HTMLCanvasElement | null;
   if (!canvas) {
     console.error('Canvas element not found');
@@ -12,37 +11,28 @@ export const initializeThree = (canvasId: string, modelPath: string) => {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
-  // Renderer setup
-  const renderer = new THREE.WebGLRenderer({ canvas });
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+  });
   renderer.setSize(width, height);
 
-  // Camera setup
   const mainCamera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
   mainCamera.position.z = 2;
 
-  // Scene setup
   const scene = new THREE.Scene();
 
-  // Lighting (optional, but recommended for better appearance)
-  const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
-  scene.add(ambientLight);
-  
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(1, 1, 1).normalize();
-  scene.add(directionalLight);
+  // Add your Three.js objects here
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
 
-  // GLTF Model loading
-  const loader = new GLTFLoader();
-  loader.load(modelPath, (gltf) => {
-    scene.add(gltf.scene);
-    animate(); // Call the animate function once the model is loaded
-  }, undefined, (error) => {
-    console.error('An error happened', error);
-  });
-
-  // Animation loop
-  const animate = () => {
+  const animate = function () {
     requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
     renderer.render(scene, mainCamera);
   };
+
+  animate();
 };
