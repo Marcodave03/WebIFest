@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <div className="Navbar">
       {/* Updated Hamburger button with visible icon */}
-      <button className={`navbar-toggler ${isSidebarOpen ? 'open' : ''}`} type="button" onClick={toggleSidebar}>
+      <button className={`navbar-toggler ${isSidebarOpen ? 'open' : 'close'}`} type="button" onClick={toggleSidebar}>
         <span className="toggler-icon">{isSidebarOpen ? '✕' : '☰'}</span> {/* Toggle between hamburger and X icon */}
       </button>
 

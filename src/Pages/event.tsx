@@ -2,16 +2,17 @@
 import React, { useEffect } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
-import { initializeThree } from './logicScript/event'; // Adjust the import path as necessary
+import { initializeThree } from './logicScript/event';
 
 const Event: React.FC = () => {
   useEffect(() => {
-    initializeThree('eventThree');
+    initializeThree('eventThree','./komodo.glb');
+    //initializeThree('eventThree', 'Assets/komodo.glb');
   }, []);
 
   return (
     <div className="Event">
-      <Navbar/>
+      <Navbar />
       <header className="Event-header">
         <canvas id='eventThree'></canvas>
       </header>
