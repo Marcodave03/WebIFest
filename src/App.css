@@ -39,6 +39,76 @@
   }
 }
 
+/* Main */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.parallax{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  
+  overflow: hidden;
+}
+
+.pImg{
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  justify-content: center;
+}
+
+#text1{
+  position:absolute;
+  font-size:7em;
+  color:#fff;
+  text-shadow:2px 2px 4px rgba(0,0,0,0.2);
+  top:200px;
+  filter : drop-shadow(5px 5px 2px black);
+}
+
+/* #grad{
+  background-image: linear-gradient(to bottom,rgba(255,0,0,0),black);
+  width:auto;
+  height:auto;
+} */
+
+.parallax img{
+  position : absolute;
+  top:0;
+  left:0;
+  width:100%;
+  point-events : none;
+}
+
+.sec{
+  position:relative;
+  background-color: green;
+  /* top : 100vh; */
+  padding:100px;
+}
+
+.sec h2{
+  font-size: 3em;
+  color:#fff;
+
+}
+
+.sec p{
+  font: size 1em;
+  color:#fff;
+  margin-bottom:10px;
+}
+
+
+
 /* Nav */
 .Navbar {
   display: flex;
