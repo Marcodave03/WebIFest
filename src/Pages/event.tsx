@@ -1,14 +1,20 @@
-import React from 'react';
+// Event.tsx
+import React, { useEffect } from 'react';
 import '../App.css';
-import '../App';
+import Navbar from '../Components/navbar';
+import { initializeThree } from './logicScript/event';
 
-function Event() {
+const Event: React.FC = () => {
+  useEffect(() => {
+    initializeThree('eventThree','./komodo.glb');
+    //initializeThree('eventThree', 'Assets/komodo.glb');
+  }, []);
+
   return (
     <div className="Event">
+      <Navbar />
       <header className="Event-header">
-        <p>
-          Welcome to Event
-        </p>
+        <canvas id='eventThree'></canvas>
       </header>
     </div>
   );
