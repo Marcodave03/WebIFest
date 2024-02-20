@@ -18,11 +18,11 @@ export const applyScrollingEffects = (): void => {
     if (beach1 && beach2 && beach3 && beach4 && beach5 && sec) {
         const dn: number =  1;
         beach1.style.top = 0 + 'px';
-        beach2.style.top = value * -0.1 + 'px /' + dn + 'vw' ;
-        beach3.style.top = value * -0.2 + 'px /' + dn + 'vw';
-        beach4.style.top = value * -0.3 + 'px /' + dn + 'vw';
-        beach5.style.top = value * -0.4 + 'px /' + dn + 'vw';
-        sec.style.top = value * -0.4 + 'px /' + dn + 'vw';
+        beach2.style.top = value * -0.1 + 'px';
+        beach3.style.top = value * -0.2 + 'px';
+        beach4.style.top = value * -0.3 + 'px';
+        beach5.style.top = value * -0.4 + 'px';
+        sec.style.top = value * -0.4 + 'px';
       }
     });
   }
