@@ -5,7 +5,7 @@ import { initializeThree } from './logicScript/event';
 
 const Event: React.FC = () => {
   useEffect(() => {
-    initializeThree('eventThree','./komodo.glb');
+    initializeThree('eventThree','./Komodo4.glb');
     //initializeThree('eventThree', 'Assets/komodo.glb');
   }, []);
 
