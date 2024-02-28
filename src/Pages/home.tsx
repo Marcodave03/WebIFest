@@ -115,7 +115,6 @@ const Home: React.FC = () => {
           <div>
             <div className="row logos">
               <div className="logos-slide">
-                {/* Pake ts */}
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/> 
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
