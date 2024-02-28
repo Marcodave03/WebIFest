@@ -97,11 +97,52 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="sec1" style={{ position: "relative", overflow: "hidden", width: "100vw", height: "100vh" }}>
+      <section className="sec1" style={{ position: "relative", overflow: "hidden"}}>
+        <div className="container">
+            <div className="row">
+              <div className="col-6">
+                <img id="insideImage" src={Home1} alt="imgg" style={{height:200}}  />
+              </div>
+              <div className="col-6">
+                <h2>Explore Destination</h2>
+                <h2 style={{color:"white"}}>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ut et iusto maiores, quo porro quaerat debitis! Et, fuga harum consectetur, architecto nihil molestiae repellat velit atque voluptatum illo cum.
+                </h2>
+                <button>See more</button>
+              </div>
+            </div>          
+          </div>
+
+          <div>
+            <div className="row logos">
+              <div className="logos-slide">
+                {/* Pake ts */}
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/> 
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+              </div>
+              <div className="logos-slide">
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+              </div>
+            </div>
+          </div>
       </section>
-
-
-
     </div>
   );
 }

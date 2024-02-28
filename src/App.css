@@ -104,7 +104,6 @@
 }
 
 .sec1{
-
   background-color: #011C1D;
   /* top : 100vh; */  
   padding:100px;
@@ -121,8 +120,6 @@
   color:#fff;
   margin-bottom:10px;
 }
-
-
 
 /* Nav */
 .Navbar {
@@ -226,4 +223,32 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+/* Home */
+
+.logos{
+  overflow:hidden;
+  padding : 60px 0;
+}
+
+.logos-slide {
+  white-space : nowrap;
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+  animation: 5s slide infinite linear;
+}
+
+@keyframes slide {
+  from{
+    transform:translateX(0) ;
+  }
+  to{
+    transform:translateX(-100%);
+  }
 }
