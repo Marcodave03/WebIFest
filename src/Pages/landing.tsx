@@ -3,7 +3,6 @@ import '../App.css';
 import '../App';
 import Navbar from '../Components/navbar';
 import './Style/landing.css'
-import { initializeThree } from './logicScript/event';
 
 function Landing(){
     return (
@@ -20,7 +19,7 @@ function Landing(){
               {/* <h3 id = 'head2' className='landingTitle'>Beauty and Culture Await</h3> */}
             </div>
           </div>
-          
+
         </header>
       </div>
     );
