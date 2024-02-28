@@ -1,4 +1,5 @@
 // scrollingEffects.ts
+import Home from '../home';
 
 export const applyScrollingEffects = (): void => {
   const text1: HTMLElement | null = document.getElementById('text1');
@@ -26,5 +27,17 @@ export const applyScrollingEffects = (): void => {
         sec.style.top = value * -2.4 + 'px';
       }
     });
+  }
+
+  const outsideImage: HTMLElement | null = document.getElementById('outsideImage');
+  const insideImage: HTMLElement | null = document.getElementById('insideImage');
+  const rotationFactor = 0.3;
+
+  if (outsideImage && insideImage) {
+      window.addEventListener('scroll', () => {
+          const scrollPosition: number = window.scrollY;
+          outsideImage.style.transform = `rotate(${scrollPosition * rotationFactor}deg)`;
+          insideImage.style.transform = `rotate(-${scrollPosition * rotationFactor}deg)`;
+      });
   }
 };

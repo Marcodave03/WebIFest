@@ -47,6 +47,11 @@
   box-sizing:border-box;
 }
 
+.container{
+  margin-top:100px;
+  margin-bottom: 150px;
+}
+
 .parallax{
   position:relative;
   display:flex;
@@ -165,9 +170,6 @@
   color: black; 
   transform: rotate(180deg);
 }
-
-
-
 
 .sidebar {
   height: 80%;
