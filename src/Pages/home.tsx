@@ -31,7 +31,6 @@ const Home: React.FC = () => {
         setParallaxStopped(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -128,7 +127,7 @@ const Home: React.FC = () => {
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
               </div>
-              <div className="logos-slide">
+              <div className="logos-slide1">
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>

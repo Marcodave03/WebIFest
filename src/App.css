@@ -238,6 +238,7 @@
   animation: 35s slide infinite linear;
 }
 
+
 .logos-slide img {
   height: 50px;
   margin: 0 40px;
@@ -251,4 +252,27 @@
   to{
     transform:translateX(-100%);
   }
+}
+
+@keyframes slide1{
+  from{
+    transform:translateX(0) ;
+  }
+  to{
+    transform:translateX(100%);
+  }
+
+}
+
+.logos-slide1 {
+  white-space : nowrap;
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+
+.logos-slide1 img {
+  height: 50px;
+  margin: 0 40px;
+  animation: 5s slide infinite linear;
 }
