@@ -1,3 +1,4 @@
+// Event.tsx
 import React, { useEffect } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
