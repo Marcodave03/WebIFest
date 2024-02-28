@@ -40,33 +40,103 @@
 }
 
 /* Nav */
+.Navbar {
+  display: flex;
+  align-items: center;
+}
 
-/* Sidebar styles */
+.navbar-toggler {
+  background-color: white; 
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.navbar-toggler:not(.open):hover .toggler-icon {
+  color: black; 
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.3s, padding 0.3s;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for navbar toggler icon */
+.navbar-toggler .toggler-icon {
+  display: inline-block;
+  color: black; 
+  padding: 10px;
+  transition: all 0.3s ease; 
+  font-weight: bold;
+}
+
+/* Animation for navbar toggler icon when leaving hover */
+.navbar-toggler:not(.open):not(:hover) .toggler-icon {
+  padding: 4px; 
+}
+
+.navbar-toggler.open .toggler-icon {
+  color: black; 
+  transform: rotate(180deg);
+}
+
+
+
+
 .sidebar {
-  height: 100%;
+  height: 80%;
   width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
+  background-color: white;
+  transition: width 0.3s;
   padding-top: 60px;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.show {
+  width: 250px;
+}
+
+.sidebar.show a {
+  opacity: 1; /* Show links when sidebar is open */
 }
 
 .sidebar a {
-  padding: 10px 15px;
+  opacity: 0;
+  padding: 8px 35px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 20px;
+  color: black; /* Set the color of the links */
   display: block;
-  transition: 0.3s;
+  transition: color 0.3s; 
+  position: relative;
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
+.sidebar a::after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  bottom: 0;
+  width: 0;
+  height: 2px; 
+  background-color: black; 
+  transition: width 0.3s; 
 }
+
+.sidebar a:hover::after {
+  width: 20%; 
+}
+
 
 .sidebar .closebtn {
   position: absolute;
@@ -74,30 +144,4 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
-
-/* Change width of the sidebar to 250px and left margin of the content to 250px */
-.sidebar.open {
-  width: 250px;
-}
-
-/* Add a black background color to the top navigation bar */
-.hamburger {
-  background-color: #111;
-  border: none;
-  color: white;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Content styles */
-.content {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* Shift content to the right on sidebar open */
-.content.shifted {
-  margin-left: 250px;
 }

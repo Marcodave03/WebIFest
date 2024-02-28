@@ -6,12 +6,13 @@ import Home from './Pages/home';
 import Template from './Pages/template';
 import Place from './Pages/place';
 import Event from './Pages/event';
+import Landing from './Pages/landing';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Template />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/event" element={<Event />} />
         <Route path="/place" element={<Place />} />
