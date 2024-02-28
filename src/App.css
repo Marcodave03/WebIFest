@@ -47,6 +47,11 @@
   box-sizing:border-box;
 }
 
+.container{
+  margin-top:100px;
+  margin-bottom: 150px;
+}
+
 .parallax{
   position:relative;
   display:flex;
@@ -80,6 +85,9 @@
   height:auto;
 } */
 
+.Home {
+  background-color: #011C1D;
+}
 .parallax img{
   position : absolute;
   top:0;
@@ -90,8 +98,15 @@
 
 .sec{
   position:relative;
-  background-color: green;
+  background-color: #011C1D;
   /* top : 100vh; */
+  padding:100px;
+}
+
+.sec1{
+
+  background-color: #011C1D;
+  /* top : 100vh; */  
   padding:100px;
 }
 
@@ -155,9 +170,6 @@
   color: black; 
   transform: rotate(180deg);
 }
-
-
-
 
 .sidebar {
   height: 80%;
