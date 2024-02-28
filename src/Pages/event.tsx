@@ -5,11 +5,6 @@ import Navbar from '../Components/navbar';
 import { initializeThree } from './logicScript/event';
 
 const Event: React.FC = () => {
-  useEffect(() => {
-    initializeThree('eventThree','./komodo.glb');
-    //initializeThree('eventThree', 'Assets/komodo.glb');
-  }, []);
-
   return (
     <div className="Event">
       <Navbar />
