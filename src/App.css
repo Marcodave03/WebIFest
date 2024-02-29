@@ -173,8 +173,7 @@
 
 
 .Background {
-  background-image: radial-gradient(circle farthest-side at var(--x) var(--y), rgb(11, 68, 61) 5%, #011C1D 100%);
-  background-size: 100%; /* Set background size to cover entire viewport */
+  background-image: radial-gradient(circle farthest-side at var(--x) var(--y), #011C1D 5%, black 50%);
 }
 
 .sec{
@@ -184,9 +183,9 @@
 
 .sec1{
   padding:100px;
-} */
+} 
 
-.sec h2{
+.container h2{
   font-size: 3em;
   color:#fff;
 

@@ -87,25 +87,25 @@ const Home: React.FC = () => {
         </div>
 
         <div className="container">
-  <div className="row d-flex justify-content-center">
-    <div className="col text-center">
-      {/* Container for stacked elements */}
-      <div className="stacked-elements">
-        {/* Outer image */}
-        <img id="outsideImage" src={outside} alt="imgg" style={{ height: "700px" }} />
-        {/* Inner stacked content */}
-        <div className="stacked-content">
-          {/* Inner image */}
-          <img id="insideImage" src={inside} alt="imgg" style={{ height: "550px" }} />
-          {/* Stacked text */}
-          <div className="stacked-text" style={{color:"white"}}>
-            <h2>Home to diverse ethnic groups and languages</h2>
+        <div className="row d-flex justify-content-center">
+          <div className="col text-center">
+            {/* Container for stacked elements */}
+            <div className="stacked-elements">
+              {/* Outer image */}
+              <img id="outsideImage" src={outside} alt="imgg" style={{ height: "700px" }} />
+              {/* Inner stacked content */}
+              <div className="stacked-content">
+                {/* Inner image */}
+                <img id="insideImage" src={inside} alt="imgg" style={{ height: "550px" }} />
+                {/* Stacked text */}
+                <div className="stacked-text" style={{color:"white"}}>
+                  <h2>Home to diverse ethnic groups and languages</h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
 
           
