@@ -7,7 +7,7 @@ function Navbar() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="Navbar">
+    <div className="Navbar" style={{zIndex:9999}} >
       {/* Updated Hamburger button with visible icon */}
       <button className={`navbar-toggler ${isSidebarOpen ? 'open' : 'close'}`} type="button" onClick={toggleSidebar}>
         <span className="toggler-icon">{isSidebarOpen ? '✕' : '☰'}</span> {/* Toggle between hamburger and X icon */}
