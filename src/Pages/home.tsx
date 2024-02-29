@@ -86,23 +86,32 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="container" >
-          <div className="row d-flex justify-content-center  ">
-            <div className=" col text-center">
-              <div className="col" style={{ position: "relative" }}>
-                <div className="text-center" style={{position:"absolute", top:0, left:100, zIndex:1}}>
-                  <img id="outsideImage" src={outside} alt="imgg" style={{height: "1000px"}} />
-                </div>
-                <div style={{position:"absolute", top:0, left:100, zIndex:2, marginLeft:125, marginTop:125}}>
-                  <img id="insideImage" src={inside} alt="imgg" style={{height: "750px"}} />
-                  <div style={{position:"absolute", top:0, marginTop:300 ,zIndex:3}}>
-                    <h2>Home to diverse ethnic groups and languages</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="container">
+  <div className="row d-flex justify-content-center">
+    <div className="col text-center">
+      {/* Container for stacked elements */}
+      <div className="stacked-elements">
+        {/* Outer image */}
+        <img id="outsideImage" src={outside} alt="imgg" style={{ height: "700px" }} />
+        {/* Inner stacked content */}
+        <div className="stacked-content">
+          {/* Inner image */}
+          <img id="insideImage" src={inside} alt="imgg" style={{ height: "550px" }} />
+          {/* Stacked text */}
+          <div className="stacked-text" style={{color:"white"}}>
+            <h2>Home to diverse ethnic groups and languages</h2>
           </div>
-        </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          
+
+
+
 
 
          <div className="container">

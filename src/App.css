@@ -1,5 +1,29 @@
 /* Temlpate */
 
+.stacked-elements {
+  position: relative;
+}
+
+.stacked-elements .stacked-content {
+  position: absolute;
+  top: 70px;
+  left: 210px;
+  z-index: 1; /* Ensure stacked content is behind the text */
+}
+
+.stacked-elements .stacked-content .stacked-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure text appears on top of stacked content */
+}
+
+
 .App {
   text-align: center;
 }
@@ -83,6 +107,23 @@
   object-fit: cover;
   justify-content: center;
 } */
+
+.relative-container {
+  position: relative;
+}
+
+.absolute-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.absolute-inner-content {
+  position: absolute;
+  top: 300px; /* Adjust as needed */
+  left: 100px; /* Adjust as needed */
+}
+
 
 .Home{
   overflow:hidden;
