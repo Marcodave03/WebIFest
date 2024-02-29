@@ -77,8 +77,10 @@
   overflow: hidden;
 }
 .pImg{
+  position: absolute;
   width: auto;
   height: 100%;
+  min-width: 100vw;
   object-fit: cover;
   justify-content: center;
 } */

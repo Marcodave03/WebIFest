@@ -49,7 +49,7 @@ const Home: React.FC = () => {
   return (
     <div ref={heroRef} className="Home Background">
       <Navbar/>
-      <section className="parallax" style={{zIndex:0}}>
+      <section id="parallax">
         <img src={image1} alt="imgg" className = "pImg" id="beach1"/>
         <img src={image2} alt="imgg" className = "pImg" id="beach2"/>
         <img src={image3} alt="imgg" className = "pImg" id="beach3"/>
