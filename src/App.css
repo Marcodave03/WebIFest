@@ -23,9 +23,9 @@
   z-index: 2; /* Ensure text appears on top of stacked content */
 }
 
-#eventThree{
-  width: 100vw;
-  height: 100vh;
+canvas#eventThree {
+  width: 100vw; /* Set canvas width to 100% of viewport width */
+  height: 100vh; /* Set canvas height to 100% of viewport height */
 }
 
 .App {

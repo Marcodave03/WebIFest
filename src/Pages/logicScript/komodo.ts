@@ -3,12 +3,17 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-export const initializeThree = (canvasId: string, modelPath: string) => {
+export const initializeThree = (canvasId: string, containerID : string, modelPath: string) => {
   const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
-  console.log(canvas.height);
-  console.log(canvas.width);
-  const width = canvas.width;
-  const height = canvas.height;
+  const div = document.getElementById(containerID) as HTMLDivElement | null;
+  let width = canvas.width;
+  let height = canvas.height;
+  if (div) {
+    width = div.offsetWidth;
+    height = div.offsetHeight;
+  } else {
+    console.error(`Element with ID "${containerID}" not found.`);
+  }
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
@@ -18,8 +23,7 @@ export const initializeThree = (canvasId: string, modelPath: string) => {
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
   directionalLight.position.set(0, 1, 0);
   scene.add(directionalLight);
-
-  camera.position.z = 50; // Adjusted camera position to move it even further back
+  camera.position.z = 70; // Adjusted camera position to move it even further back
 
   let model: THREE.Object3D; // Declare model variable in an accessible scope
 
@@ -28,6 +32,7 @@ export const initializeThree = (canvasId: string, modelPath: string) => {
   loader.load(modelPath, (gltf) => {
     model = gltf.scene;
     model.scale.set(0.01, 0.01, 0.01); // Adjust these values to make the model smaller
+    gltf.scene.rotation.y = Math.PI / 1.3;
     scene.add(model);
     animate(); // Start animation after model loaded
   }, undefined, (error) => {
@@ -35,7 +40,6 @@ export const initializeThree = (canvasId: string, modelPath: string) => {
   });
 
   const mouse = new THREE.Vector2();
-
   // Add OrbitControls
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true; // Optional: Enable damping for smoother controls
