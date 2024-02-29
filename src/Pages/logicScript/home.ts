@@ -15,16 +15,16 @@ export const applyScrollingEffects = (): void => {
     window.addEventListener('scroll', () => {
       const value: number = window.scrollY;   // Untuk konten
     if (text1) {
-        text1.style.marginTop = value * 0.1 + 'px';
+        text1.style.marginTop = value * 3 + 'px';
     }
     if (beach1 && beach2 && beach3 && beach4 && beach5 && sec) {
         const dn: number =  1;
+        beach5.style.top = 0 + 'px';
+        beach4.style.top = value * 0.2 + 'px' ;
+        beach3.style.top = value * 0.4 + 'px';
+        beach2.style.top = value * 0.6 + 'px';
         beach1.style.top = 0 + 'px';
-        beach2.style.top = value * -0.2 + 'px' ;
-        beach3.style.top = value * -0.4 + 'px';
-        beach4.style.top = value * -0.6 + 'px';
-        beach5.style.top = value * -1.2 + 'px';
-        sec.style.top = value * -1.2 + 'px';
+        sec.style.top = 0 + 'px';
       }
     });
   }

@@ -46,7 +46,6 @@
   padding:0;
   box-sizing:border-box;
   scroll-behavior: smooth;
-
 }
 
 .CursorCircle {
@@ -85,69 +84,66 @@
   justify-content: center;
 } */
 
-.parallax{
-  position:relative;
-  width:100%;
-  height:100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+.Home{
+  overflow:hidden;
+  height:100%;
 }
 
-.pImg{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#parallax .pImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-#text1{
-  position:absolute;
-  font-size:7em;
-  color:#fff;
-  text-shadow:2px 2px 4px rgba(0,0,0,0.2);
-  top:200px;
-  filter : drop-shadow(5px 5px 2px black);
-} 
-
-.parallax::before{
-  content:"";
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:100px;
-  background: linear-gradient(to top,#011c1d,transparent);
-  z-index:99;
-
+#parallax::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #011c1d, transparent);
+  z-index: 99;
 }
+
+
+#parallax #text1 {
+  position: absolute;
+  font-size: 7em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  top: 200px;
+  filter: drop-shadow(5px 5px 2px black);
+  white-space: nowrap;
+}
+
 
 .Background {
   background-image: radial-gradient(circle farthest-side at var(--x) var(--y), rgb(11, 68, 61) 5%, #011C1D 100%);
   background-size: 100%; /* Set background size to cover entire viewport */
 }
 
-.Home {
- 
-}
-
-.parallax img{
-  position : absolute;
-  top:0;
-  left:0;
-  width:100%;
-  point-events : none;
-}
-
 .sec{
   position:relative;
   padding:100px;
-}
+} 
 
 .sec1{
   padding:100px;
-}
+} */
 
 .sec h2{
   font-size: 3em;
