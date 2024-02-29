@@ -173,7 +173,7 @@
 
 
 .Background {
-  background-image: radial-gradient(circle farthest-side at var(--x) var(--y), #011C1D 5%, black 50%);
+  background-image: radial-gradient(circle farthest-side at var(--x) var(--y), #011C1D 5%, black 100%);
 }
 
 .sec{
