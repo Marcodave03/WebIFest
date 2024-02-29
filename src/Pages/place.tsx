@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import './Style/Page.css';
 import explores from '../Assets/explore.jpg';
 import padar from '../Assets/padar.jpeg';
+import boat from '../Assets/boat.jpeg'
 
 import { text } from 'stream/consumers';
 import { Container } from 'react-bootstrap';
@@ -24,11 +25,6 @@ function Place() {
     alignItems: 'center',
   };
 
-  // ukuran untuk section 2 (most visited)
-  const sectionStyle = {
-    width: '1920px',
-    height: '600px'
-  }
 
   //padar
   const rectangleStyle = {
@@ -37,8 +33,17 @@ function Place() {
     backgroundSize: 'cover',
     backgroundImage: `url(${padar})`,
     display: 'flex',
-    marginLeft: '-200px',
+    marginLeft: '50px',
     borderRadius: '20px'
+  };
+
+  const tripImage = {
+    width: '444px',
+    height: '550px',
+    backgroundSize: 'cover',
+    backgroundImage: `url(${boat})`,
+    display: 'flex',
+    marginLeft: '20px'
   };
 
   const mostVisited = {
@@ -80,18 +85,44 @@ function Place() {
       </section>
 
       {/* Most visited places */}
-      <section style={sectionStyle}>
+      <section className="mostVisited">
         <div className="container">
           <div className="row">
-            <div className="col" style={{ textAlign: 'center' }}>
-              <Container> </Container>
-              <div style={rectangleStyle}></div>
-              <p style={mostVisited}> MOST VISITED </p>
-              <p style={mostVisited}> PLACES 2023 </p>
+            <div className="col-6" style={rectangleStyle}>
+            </div>
+            <div className='col-6'>
+              <div className='row-1' style={mostVisited}>
+                <p> MOST VISITED </p>
+                <p> PLACES 2023 </p>
+              </div>
+              <div className='row-2' >
+                <u> Padar Island </u>
+              </div>
+              <div className='row-3'>
+                <p> Explore rugged hills, clear waters, and stunning views in Indonesia's Komodo National Park.
+                  A hidden gem for adventurers and nature lovers.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Trip reservation */}
+      <section className='tripReservation'>
+        <div className="container">
+          <div className="row-1-trip" style={{paddingTop:10}}>
+            <div className='col-6'>
+              <p id='tripText'> Trip Reservation </p>
+              <div style={tripImage}> </div>
+            </div>
+            <div className='col-6'>  </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* Trip reservation */}
 
 
       <header className="Place-header">
