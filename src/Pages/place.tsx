@@ -25,10 +25,7 @@ function Place() {
   };
 
   // ukuran untuk section 2 (most visited)
-  const sectionStyle = {
-    width: '1920px',
-    height: '600px'
-  }
+
 
   //padar
   const rectangleStyle = {
@@ -37,7 +34,7 @@ function Place() {
     backgroundSize: 'cover',
     backgroundImage: `url(${padar})`,
     display: 'flex',
-    marginLeft: '-200px',
+    // marginLeft: '-200px',
     borderRadius: '20px'
   };
 
@@ -80,24 +77,20 @@ function Place() {
       </section>
 
       {/* Most visited places */}
-      <section style={sectionStyle}>
+      <section>
         <div className="container">
-          <div className="row">
-            <div className="col" style={{ textAlign: 'center' }}>
-              <Container> </Container>
+          <div className="row" style={{marginTop:"60px"}}>
+            <div className="col-12 col-sm-12 col-lg-6 col-xl-3" >
               <div style={rectangleStyle}></div>
+            </div>
+            <div className="col-12 col-sm-12 col-lg-6 col-xl-9" style={{ textAlign: 'center' }}  >
               <p style={mostVisited}> MOST VISITED </p>
               <p style={mostVisited}> PLACES 2023 </p>
             </div>
           </div>
         </div>
       </section>
-
-
       <header className="Place-header">
-
-
-
       </header>
     </div>
   );
