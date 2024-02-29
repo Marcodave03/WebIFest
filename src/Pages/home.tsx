@@ -54,8 +54,8 @@ const Home: React.FC = () => {
         <img src={image6} alt="imgg" className = "pImg" id="beach1"/> 
         <img src={image2} alt="imgg" className = "pImg" id="beach2"/>
         <img src={image3} alt="imgg" className = "pImg" id="beach3"/>
-        <h2 id="text1">Nusa Travel</h2>
         <img src={image4} alt="imgg" className = "pImg" id="beach4"/>
+        <h2 id="text1">Nusa Travel</h2>
         <img src={image5} alt="imgg" className = "pImg" id="beach5"/>
       </section>
 
@@ -106,13 +106,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-
-
-          
-
-
-
-
 
          <div className="container">
             <div className="row">

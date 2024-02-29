@@ -18,7 +18,8 @@ function Navbar() {
         <Link to="/Place" className="sidebar-link"> Place </Link>
         <Link to="/" className="sidebar-link"> Endemic Animal </Link>
         <Link to="/Event" className="sidebar-link"> Event </Link>
-        <div></div>
+        <div>
+        </div>
       </div>
     </div>
   );
