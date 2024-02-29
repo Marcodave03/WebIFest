@@ -20,7 +20,7 @@ body{
     position: fixed;
     display: flex;
     justify-content: center;
-    z-index: -2;
+    z-index: -3;
 }
 #entranceVideo{
     min-width: 100vw;
@@ -34,7 +34,7 @@ body{
     min-width: 100vw;
     min-height: 100vh;
     opacity: 90%;
-    z-index: -1;
+    z-index: -2;
     position: fixed;
 }
 .landingTitle{

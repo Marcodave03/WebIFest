@@ -3,7 +3,7 @@ import '../App.css';
 import Navbar from '../Components/navbar';
 import './Style/landing.css';
 import { initializeThree } from './logicScript/komodo';
-
+import Komodo from './Komodo';
 function Landing() {
   return (
     <div className="Landing">
@@ -12,6 +12,7 @@ function Landing() {
         <div id='videoContainer'>
           <video autoPlay loop muted playsInline src="./videoEntrance.mp4" id='entranceVideo'></video>
         </div>
+        <Komodo/>
         <div id='overlay-color'></div>
         <div id='page1'>
           <div id='entrance'>
@@ -21,9 +22,8 @@ function Landing() {
               <h1 id='head1' className='landingTitle'>Tenggara</h1>
               <h1 id='head1' className='landingTitle'>With us</h1>
             </div>
-          </div>
-            <canvas id='eventThree'></canvas>
-        </div>
+          </div>                              
+        </div>      
       </header>
     </div>
   );

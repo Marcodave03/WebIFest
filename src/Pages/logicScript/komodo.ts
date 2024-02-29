@@ -23,16 +23,15 @@ export const initializeThree = (canvasId: string, containerID : string, modelPat
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
   directionalLight.position.set(0, 1, 0);
   scene.add(directionalLight);
+  camera.position.y = 20;
   camera.position.z = 70; // Adjusted camera position to move it even further back
-
   let model: THREE.Object3D; // Declare model variable in an accessible scope
-
   // GLTF Model loading
   const loader = new GLTFLoader();
   loader.load(modelPath, (gltf) => {
     model = gltf.scene;
     model.scale.set(0.01, 0.01, 0.01); // Adjust these values to make the model smaller
-    gltf.scene.rotation.y = Math.PI / 1.3;
+    gltf.scene.rotation.y = Math.PI / -1.2;
     scene.add(model);
     animate(); // Start animation after model loaded
   }, undefined, (error) => {
