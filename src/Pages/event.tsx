@@ -2,11 +2,11 @@
 import React, { useEffect } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
-import { initializeThree } from './logicScript/event';
+import { initializeThree } from './logicScript/komodo';
 
 const Event: React.FC = () => {
   useEffect(() => {
-    initializeThree('eventThree','./Komodo4.glb',1000,1000);
+    initializeThree('eventThree','./Komodo.glb');
     //initializeThree('eventThree', 'Assets/komodo.glb');
   }, []);
 
