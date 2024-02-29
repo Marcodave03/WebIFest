@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../Components/navbar';
 import image1 from '../Assets/para1.jpg';
 import image2 from '../Assets/para2.png';
@@ -14,34 +14,42 @@ import { applyScrollingEffects } from './logicScript/home'; // Import the applyS
 import '../App.css';
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    applyScrollingEffects(); // Call the applyScrollingEffects function when the component mounts
-  }, []);
-
+  const heroRef = useRef<HTMLDivElement>(null);
   const [parallaxStopped, setParallaxStopped] = useState(false);
 
   useEffect(() => {
+    applyScrollingEffects();
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const threshold = 500; // Adjust this value as needed
-
+      const threshold = 500; 
       if (scrollPosition > threshold) {
         setParallaxStopped(true);
       } else {
         setParallaxStopped(false);
       }
     };
+    const updateMousePosition = (ev: MouseEvent) => {
+      if (!heroRef.current) return;
+      const { clientX, clientY } = ev;
+      console.log(clientX, clientY);
+      const x = ev.clientX / window.innerWidth * 100 + '%';
+      const y = ev.clientY / window.innerHeight * 100 + '%';
+      heroRef.current.style.setProperty('--x', x);
+      heroRef.current.style.setProperty('--y', y);
+    };
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove',updateMousePosition);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove',updateMousePosition);
     };
   }, []);
 
   return (
-    <div className="Home">
+    <div ref={heroRef} className="Home Background">
       <Navbar/>
-      <section className="parallax">
+      <section className="parallax" style={{zIndex:0}}>
         <img src={image1} alt="imgg" className = "pImg" id="beach1"/>
         <img src={image2} alt="imgg" className = "pImg" id="beach2"/>
         <img src={image3} alt="imgg" className = "pImg" id="beach3"/>
@@ -50,7 +58,7 @@ const Home: React.FC = () => {
         <img src={image5} alt="imgg" className = "pImg" id="beach5"/>
       </section>
 
-      <section className="sec" id="sec">
+      <section ref={heroRef}  className="sec Background" id="sec" style={{zIndex:1}}>
           <div className="container">
             <div className="row d-flex justify-content center">
               <div className="col text-center">
@@ -96,7 +104,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="sec1" style={{ position: "relative", overflow: "hidden"}}>
+
+      <section ref={heroRef} className="sec1 Background" style={{ position: "relative", overflow: "hidden", zIndex:2}}>
         <div className="container">
             <div className="row">
               <div className="col-6">
@@ -112,7 +121,7 @@ const Home: React.FC = () => {
             </div>          
           </div>
 
-          <div>
+          <div style={{transform:"rotate(10deg)"}}>
             <div className="row logos">
               <div className="logos-slide">
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/> 
@@ -128,6 +137,18 @@ const Home: React.FC = () => {
               </div>
               <div className="logos-slide1">
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
+              </div>
+              <div className="logos-slide">
+                <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/> 
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/>
