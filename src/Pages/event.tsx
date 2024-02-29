@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../App.css';
 import '../Pages/Style/komodo.css'
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import { initializeThree } from './logicScript/komodo';
 
 const Event: React.FC = () => {
@@ -18,6 +19,7 @@ const Event: React.FC = () => {
           <canvas id='eventThree'></canvas>
         </div>
       </header>
+      <Footer />
     </div>
   );
 }

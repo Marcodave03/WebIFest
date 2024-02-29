@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import './Style/landing.css';
 import { initializeThree } from './logicScript/komodo';
 
@@ -25,6 +26,7 @@ function Landing() {
             <canvas id='eventThree'></canvas>
         </div>
       </header>
+      <Footer />
     </div>
   );
 }

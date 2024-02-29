@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import image1 from '../Assets/para1.jpg';
 import image2 from '../Assets/para2.png';
 import image3 from '../Assets/para3.png';
@@ -163,6 +164,7 @@ const Home: React.FC = () => {
             </div>
           </div>
       </section>
+      <Footer />
     </div>
   );
 }
