@@ -5,11 +5,12 @@ import image2 from '../Assets/para2.png';
 import image3 from '../Assets/para3.png';
 import image4 from '../Assets/para4.png';
 import image5 from '../Assets/para5.png';
-import Home1 from '../Assets/Home1.svg';
+import image6 from '../Assets/para6.png';
+import Home1 from '../Assets/Home1.png';
 import Home2 from '../Assets/Home2.svg';
 import Home3 from '../Assets/Home3.svg';
-import inside from '../Assets/Inside.svg';
-import outside from '../Assets/Outside.svg';
+import inside from '../Assets/inside.png';
+import outside from '../Assets/outside.png';
 import { applyScrollingEffects } from './logicScript/home'; // Import the applyScrollingEffects function
 import '../App.css';
 
@@ -50,7 +51,7 @@ const Home: React.FC = () => {
     <div ref={heroRef} className="Home Background">
       <Navbar/>
       <section id="parallax" style={{zIndex:0}}>
-        <img src={image1} alt="imgg" className = "pImg" id="beach1"/> 
+        <img src={image6} alt="imgg" className = "pImg" id="beach1"/> 
         <img src={image2} alt="imgg" className = "pImg" id="beach2"/>
         <img src={image3} alt="imgg" className = "pImg" id="beach3"/>
         <h2 id="text1">Nusa Travel</h2>
@@ -102,10 +103,9 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>  
-      </section>
 
-      <section ref={heroRef} className="sec1 Background" style={{ position: "relative", overflow: "hidden", zIndex:2}}>
-        <div className="container">
+
+         <div className="container">
             <div className="row">
               <div className="col-6">
                 <img id="insideImage" src={Home1} alt="imgg" style={{height:200}}  />
