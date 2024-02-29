@@ -2,20 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
 import './Style/landing.css';
-import { initializeThree } from './logicScript/event';
+import { initializeThree } from './logicScript/komodo';
 
 function Landing() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    if (canvasRef.current) {
-      const canvas = canvasRef.current;
-      const computedStyle = getComputedStyle(canvas);
-      const canvasWidth = parseInt(computedStyle.getPropertyValue('width'), 10);
-      const canvasHeight = parseInt(computedStyle.getPropertyValue('height'), 10);
-      initializeThree('eventThree', './Komodo4.glb', canvasWidth, canvasHeight);
-    }
-  }, []);
-
   return (
     <div className="Landing">
       <Navbar />

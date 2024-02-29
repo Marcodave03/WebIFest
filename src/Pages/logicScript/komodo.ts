@@ -5,18 +5,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export const initializeThree = (canvasId: string, modelPath: string) => {
   const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
-  if (!canvas) {
-    console.error('Canvas element not found');
-    return;
-  }
-
+  console.log(canvas.height);
+  console.log(canvas.width);
+  const width = canvas.width;
+  const height = canvas.height;
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
+  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
-  // If you want to add lighting to your scene to better show off the model:
+  renderer.setSize(width, height);
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
   scene.add(ambientLight);
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);

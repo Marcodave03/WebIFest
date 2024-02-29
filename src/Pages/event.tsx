@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
-import { initializeThree } from './logicScript/event';
+import { initializeThree } from './logicScript/komodo';
 
 const Event: React.FC = () => {
   useEffect(() => {
