@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react';
 import '../App';
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Style/Page.css';
@@ -47,7 +48,6 @@ function MySwiper() {
 function Place() {
   AOS.init();
 
-  //style tulisan explore blabla biar di tengah rata kiri
   const exploreSectionStyle = {
     backgroundImage: `url(${explores})`,
     backgroundSize: 'cover',
@@ -58,15 +58,13 @@ function Place() {
     alignItems: 'center',
   };
 
-
-  //padar
   const rectangleStyle = {
     width: '444px',
     height: '550px',
     backgroundSize: 'cover',
     backgroundImage: `url(${padar})`,
     display: 'flex',
-    marginLeft: '50px',
+    // marginLeft: '-200px',
     borderRadius: '20px'
   };
 
@@ -90,7 +88,6 @@ function Place() {
     fontWeight: '600',
     lineHeight: 'normal',
   };
-
 
   return (
     <div className="Place">
@@ -120,120 +117,22 @@ function Place() {
       </section>
 
       {/* Most visited places */}
-      <section className="mostVisited">
-        <div className="container">
-          <div className="row">
-            <div className="col-6" style={rectangleStyle}>
-            </div>
-            <div className='col-6'>
-              <div className='row-1' style={mostVisited}>
-                <p> MOST VISITED </p>
-                <p> PLACES 2023 </p>
-              </div>
-              <div className='row-2' >
-                <a href=''> Padar Island </a>
-              </div>
-              <div className='row-3'>
-                <p> Explore rugged hills, clear waters, and stunning views in Indonesia's Komodo National Park.
-                  A hidden gem for adventurers and nature lovers.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trip reservation */}
-      <section className='tripReservation'>
-        <div className="container">
-          <div className="row-1-trip" style={{ paddingTop: 10 }}>
-            <div className='row-2'>
-              <div className='col-6-1'>
-                <p id='tripText'> Trip Reservation </p>
-                {/* <img src="../Assets/boat.jpeg"> </img> */}
-                <div id='boat-img' style={tripImage}> </div>
-              </div>
-              <div className='col-6-2'>
-                <p id='boat-type'> Boat Type: </p>
-                <p id='boat-type-desc'> Embark on our Sunset Cruise Adventure aboard our luxurious catamaran,
-                  designed for comfort and style. Feel the gentle sway of the waves as you indulge in an evening of unparalleled relaxation.</p>
-                <p id='price'> Price: </p>
-                <p id='price-desc'> Set sail into the horizon with our Sunset Cruise Adventure
-                  starting at $99 per person. Treat yourself to an unforgettable journey as the sun dips below the waterline in a symphony of colors.</p>
-                <p id='include'> Include: </p>
-                <ul className='include-list'>
-                  <li> Scenic cruise along the stunning coastline </li>
-                  <li> Complimentary welcome drinks and light snacks</li>
-                  <li> Onboard entertainment and live music </li>
-                  <li> Experienced captain and crew ensuring a safe and enjoyable voyage </li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Hotel */}
       <section>
         <div className="container">
-          <div className="row-1-htl">
-            <p id='htlTxt'> Hotels </p>
-          </div>
-          <div className="row-2-htl">
-            <div className="swiper-container mySwiper">
-              <div className="swiper-wrapper">
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Nature 1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="Nature 2" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="Nature 3" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="Nature 4" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="Nature 5" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="Nature 6" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="Nature 7" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Nature 8" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="Nature 9" />
-                </SwiperSlide>
-              </div>
-              <div className="swiper-pagination"></div>
+          <div className="row" style={{marginTop:"60px"}}>
+            <div className="col-12 col-sm-12 col-lg-6 col-xl-3" >
+              <div style={rectangleStyle}></div>
+            </div>
+            <div className="col-12 col-sm-12 col-lg-6 col-xl-9" style={{ textAlign: 'center' }}  >
+              <p style={mostVisited}> MOST VISITED </p>
+              <p style={mostVisited}> PLACES 2023 </p>
             </div>
           </div>
         </div>
       </section>
-
-
       <header className="Place-header">
-
-        {/* template */}
-        {/* 
-        <div className="container">
-          <div className="row">
-            <div className="col">
-
-            </div>
-          </div>
-        </div>
-         */}
-
-
-
       </header>
+      <Footer />
     </div>
   );
 }

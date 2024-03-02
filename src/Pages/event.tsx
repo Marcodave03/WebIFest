@@ -1,23 +1,17 @@
-// Event.tsx
 import React, { useEffect } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
-import { initializeThree } from './logicScript/event';
+import Footer from '../Components/footer';
+import { initializeThree } from './logicScript/komodo';
 
 const Event: React.FC = () => {
-  useEffect(() => {
-    initializeThree('eventThree','./Komodo4.glb');
-    //initializeThree('eventThree', 'Assets/komodo.glb');
-  }, []);
-
   return (
     <div className="Event">
       <Navbar />
       <header className="Event-header">
-        <canvas id='eventThree'></canvas>
       </header>
+      <Footer />
     </div>
   );
 }
-
 export default Event;
