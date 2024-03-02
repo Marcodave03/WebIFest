@@ -9,7 +9,7 @@ function Landing() {
   return (
     <div className="Landing">
       <Navbar />
-      <header className="Landing-header">
+      <header className="Landing-header" style={{overflow: 'hidden'}}>
         <div id='videoContainer'>
           <video autoPlay loop muted playsInline src="./videoEntrance.mp4" id='entranceVideo'></video>
         </div>

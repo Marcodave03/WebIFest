@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Navbar from '../Components/navbar';
 import Footer from '../Components/footer';
 import image1 from '../Assets/para1.jpg';
@@ -18,6 +20,9 @@ import '../App.css';
 const Home: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const [parallaxStopped, setParallaxStopped] = useState(false);
+  setTimeout(() => {
+    AOS.init();
+  }, 500);
 
   useEffect(() => {
     applyScrollingEffects();
@@ -61,33 +66,34 @@ const Home: React.FC = () => {
       </section>
 
       <section ref={heroRef}  className="sec Background" id="sec" style={{zIndex:1}}>
-          <div className="container">
+          <div className="container" data-aos="fade-up">
             <div className="row d-flex justify-content center">
               <div className="col text-center">
-                <img src={Home1} alt="imgg" id="" style={{ height:"400px" }}/>
-                <h2 className="">Nusa Tenggara Timur</h2>
+                <img src={Home1} alt="imgg" id="" style={{ height:"200px" }}/>
+                <p className="">Nusa Tenggara Timur</p>
               </div>
             </div>
           </div>
-          <div className="container">
+
+          <div className="container" data-aos="fade-up">
           <div className="row d-flex justify-content-center">
             <div className="col text-center">
-              <img src={Home2} alt="imgg" id="" style={{ height:"400px" }}/>
-              <h2>Stunning Landscape of beaches and mountains</h2>
+              <img src={Home2} alt="imgg" id="" style={{ height:"200px" }}/>
+              <p>Stunning Landscape of beaches and mountains</p>
             </div>
           </div>
         </div>
 
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <div className="row d-flex justify-content-center">
             <div className="col text-center">
-              <img src={Home3} alt="imgg" id="" style={{ height:"400px" }}/>
-              <h2>Rich Cultural heritage and unique traditions</h2>
+              <img src={Home3} alt="imgg" id="" style={{ height:"200px" }}/>
+              <p>Rich Cultural heritage and unique traditions</p>
             </div>
           </div>
         </div>
 
-        <div className="container">
+        <div className="container" >
         <div className="row d-flex justify-content-center">
           <div className="col text-center">
             {/* Container for stacked elements */}
@@ -100,7 +106,7 @@ const Home: React.FC = () => {
                 <img id="insideImage" src={inside} alt="imgg" style={{ height: "550px" }} />
                 {/* Stacked text */}
                 <div className="stacked-text" style={{color:"white"}}>
-                  <h2>Home to diverse ethnic groups and languages</h2>
+                  <p>Home to diverse ethnic groups and languages</p>
                 </div>
               </div>
             </div>
@@ -108,22 +114,22 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-         <div className="container">
+         <div className="container" data-aos="fade-up">
             <div className="row">
               <div className="col-6">
                 <img id="insideImage" src={Home1} alt="imgg" style={{height:200}}  />
               </div>
               <div className="col-6">
                 <h2>Explore Destination</h2>
-                <h2 style={{color:"white"}}>
+                <p style={{color:"white"}}>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio ut et iusto maiores, quo porro quaerat debitis! Et, fuga harum consectetur, architecto nihil molestiae repellat velit atque voluptatum illo cum.
-                </h2>
+                </p>
                 <button>See more</button>
               </div>
             </div>          
           </div>
 
-          <div style={{transform:"rotate(10deg)"}}>
+          <div style={{transform:"rotate(10deg)", marginTop:"250px"}}>
             <div className="row logos">
               <div className="logos-slide">
                 <img className="image-fluid" src={Home1}  style={{objectFit:"contain", width:150,height:"auto"}} id="" alt=""/> 
@@ -164,6 +170,7 @@ const Home: React.FC = () => {
             </div>
           </div>
       </section>
+
       <Footer />
     </div>
   );

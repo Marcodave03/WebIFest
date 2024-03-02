@@ -1,107 +1,62 @@
-// eventScript.ts
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-export const initializeThree = (canvasId: string, containerID : string, modelPath: string) => {
-  const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
-  const div = document.getElementById(containerID) as HTMLDivElement | null;
-  let width = canvas.width;
-  let height = canvas.height;
-  if (div) {
-    width = div.offsetWidth;
-    height = div.offsetHeight;
-  } else {
-    console.error(`Element with ID "${containerID}" not found.`);
-  }
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(width, height);
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-  scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(0, 1, 0);
-  scene.add(directionalLight);
-  camera.position.y = 20;
-  camera.position.z = 70; // Adjusted camera position to move it even further back
-  let model: THREE.Object3D; // Declare model variable in an accessible scope
-  // GLTF Model loading
-  const loader = new GLTFLoader();
-  loader.load(modelPath, (gltf) => {
-    model = gltf.scene;
-    model.scale.set(0.01, 0.01, 0.01); // Adjust these values to make the model smaller
-    gltf.scene.rotation.y = Math.PI / -1.2;
-    scene.add(model);
-    animate(); // Start animation after model loaded
-  }, undefined, (error) => {
-    console.error('An error happened', error);
-  });
+export const initializeThree = (canvasId: string, containerId: string, modelUrl: string) => {
+    let scene: THREE.Scene;
+    let camera: THREE.PerspectiveCamera;
+    let renderer: THREE.WebGLRenderer;
+    let controls: OrbitControls;
+    let model: THREE.Group;
 
-  const mouse = new THREE.Vector2();
-  // Add OrbitControls
-  const controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true; // Optional: Enable damping for smoother controls
+    const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
+    const container = document.getElementById(containerId) as HTMLElement;
 
-  // Inside the initializeThree() function
-  const animate = () => {
-    requestAnimationFrame(animate);
+    const init = () => {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+        renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
 
-    // Update OrbitControls
-    controls.update();
+        // controls = new OrbitControls(camera, renderer.domElement);
+        // controls.enableDamping = true;
+        // controls.dampingFactor = 0.25;
 
-    renderer.render(scene, camera);
-  };
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
 
-  // Add event listener for mouse move
-  canvas.addEventListener('mousemove', (event) => {
-    // Convert mouse position to normalized device coordinates (-1 to +1)
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-  });
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(0, 1, 0);
+        scene.add(directionalLight);
 
+        const loader = new GLTFLoader();
+        loader.load(modelUrl, (gltf) => {
+            model = gltf.scene;
+            model.scale.set(0.01, 0.01, 0.01);
+            model.rotation.set(THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(120),0)
+            model.position.set(40,0,0);
+            scene.add(model);
+        }, undefined, (error) => {
+            console.error('An error happened', error);
+        });
+
+        camera.position.set(0, 20, 40);
+        camera.lookAt(0, 0, 0);
+
+        const animate = () => {
+            requestAnimationFrame(animate);
+            // controls.update();
+            renderer.render(scene, camera);
+        };
+
+        animate();
+    };
+
+    init();
+
+    window.addEventListener('resize', () => {
+        camera.aspect = container.offsetWidth / container.offsetHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+    });
 };
-
-
-
-
-
-
-
-// eventScript.ts
-// import * as THREE from 'three';
-
-// export const initializeThree = (canvasId: string) => {
-//   const canvas = document.getElementById(canvasId) as HTMLCanvasElement;
-//   if (!canvas) {
-//     console.error('Canvas element not found');
-//     return;
-//   }
-
-//   const scene = new THREE.Scene();
-//   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-//   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-//   renderer.setSize(window.innerWidth, window.innerHeight);
-//   document.body.appendChild(renderer.domElement);
-
-//   const geometry = new THREE.BoxGeometry();
-//   const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-//   const cube = new THREE.Mesh(geometry, material);
-//   scene.add(cube);
-
-//   camera.position.z = 5;
-
-//   const animate = () => {
-//     requestAnimationFrame(animate);
-
-//     // Rotation logic for the cube
-//     cube.rotation.x += 0.01;
-//     cube.rotation.y += 0.01;
-
-//     renderer.render(scene, camera);
-//   };
-
-//   animate();
-// };
-
