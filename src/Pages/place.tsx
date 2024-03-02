@@ -1,52 +1,28 @@
-// import React from 'react';
-import React, { useRef, useState } from 'react';
-import '../App';
+import React, { useEffect } from 'react';
 import Navbar from '../Components/navbar';
-import Footer from '../Components/footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Style/Page.css';
 import explores from '../Assets/explore.jpg';
 import padar from '../Assets/padar.jpeg';
-import boat from '../Assets/boat-2.jpeg'
+import boat from '../Assets/boat-2.jpeg';
 import resort1Img from '../Assets/resort-1.jpg';
-import {Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow, Pagination } from 'swiper/modules';
-import 'swiper/css/navigation';
-import 'swiper/css/bundle';
-import 'swiper/css';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules"; 
+
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { text } from 'stream/consumers';
-import { Container } from 'react-bootstrap';
-import { useEffect } from 'react';
 
+// Initialize Swiper core components
 
-SwiperCore.use([EffectCoverflow, Pagination]);
-
-function MySwiper() {
-  useEffect(() => {
-    const swiper = new Swiper('.mySwiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-  }, []);
-}
 
 function Place() {
-  AOS.init();
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const exploreSectionStyle = {
     backgroundImage: `url(${explores})`,
@@ -64,11 +40,10 @@ function Place() {
     backgroundSize: 'cover',
     backgroundImage: `url(${padar})`,
     display: 'flex',
-    // marginLeft: '-200px',
+    marginLeft: '50px',
     borderRadius: '20px'
   };
 
-  //boat img
   const tripImage = {
     width: '444px',
     height: '550px',
@@ -78,7 +53,6 @@ function Place() {
     marginLeft: '20px'
   };
 
-  // most visited txt
   const mostVisited = {
     color: 'rgba(0, 0, 0, 0.80)',
     textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
@@ -92,7 +66,6 @@ function Place() {
   return (
     <div className="Place">
       <Navbar />
-      {/* Explore */}
       <section className='explore' style={exploreSectionStyle}>
         <div className="container">
           <div className="row" >
@@ -116,23 +89,110 @@ function Place() {
         </div>
       </section>
 
-      {/* Most visited places */}
-      <section>
+      <section className="mostVisited">
         <div className="container">
-          <div className="row" style={{marginTop:"60px"}}>
-            <div className="col-12 col-sm-12 col-lg-6 col-xl-3" >
-              <div style={rectangleStyle}></div>
-            </div>
-            <div className="col-12 col-sm-12 col-lg-6 col-xl-9" style={{ textAlign: 'center' }}  >
-              <p style={mostVisited}> MOST VISITED </p>
-              <p style={mostVisited}> PLACES 2023 </p>
+          <div className="row">
+            <div className="col-6" style={rectangleStyle}></div>
+            <div className='col-6'>
+              <div className='row-1' style={mostVisited}>
+                <p> MOST VISITED </p>
+                <p> PLACES 2023 </p>
+              </div>
+              <div className='row-2'>
+                <a href=''> Padar Island </a>
+              </div>
+              <div className='row-3'>
+                <p> Explore rugged hills, clear waters, and stunning views in Indonesia's Komodo National Park.
+                  A hidden gem for adventurers and nature lovers.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section className='tripReservation'>
+        <div className="container">
+          <div className="row-1-trip" style={{ paddingTop: 10 }}>
+            <div className='row-2'>
+              <div className='col-6-1'>
+                <p id='tripText'> Trip Reservation </p>
+                <div id='boat-img' style={tripImage}></div>
+              </div>
+              <div className='col-6-2'>
+                <p id='boat-type'> Boat Type: </p>
+                <p id='boat-type-desc'> Embark on our Sunset Cruise Adventure aboard our luxurious catamaran,
+                  designed for comfort and style. Feel the gentle sway of the waves as you indulge in an evening of unparalleled relaxation.</p>
+                <p id='price'> Price: </p>
+                <p id='price-desc'> Set sail into the horizon with our Sunset Cruise Adventure
+                  starting at $99 per person. Treat yourself to an unforgettable journey as the sun dips below the waterline in a symphony of colors.</p>
+                <p id='include'> Include: </p>
+                <ul className='include-list'>
+                  <li> Scenic cruise along the stunning coastline </li>
+                  <li> Complimentary welcome drinks and light snacks</li>
+                  <li> Onboard entertainment and live music </li>
+                  <li> Experienced captain and crew ensuring a safe and enjoyable voyage </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="row-1-htl">
+            <p id='htlTxt'> Hotels </p>
+          </div>
+          <div className="row-2-htl">
+            <Swiper
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={'auto'}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              pagination={{ clickable: true }}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      </section>
+
       <header className="Place-header">
       </header>
-      <Footer />
     </div>
   );
 }
