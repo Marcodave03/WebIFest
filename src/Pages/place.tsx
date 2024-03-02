@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App';
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Style/Page.css';
@@ -13,7 +14,6 @@ import { Container } from 'react-bootstrap';
 function Place() {
   AOS.init();
 
-  //style tulisan explore blabla biar di tengah rata kiri
   const exploreSectionStyle = {
     backgroundImage: `url(${explores})`,
     backgroundSize: 'cover',
@@ -24,10 +24,6 @@ function Place() {
     alignItems: 'center',
   };
 
-  // ukuran untuk section 2 (most visited)
-
-
-  //padar
   const rectangleStyle = {
     width: '444px',
     height: '550px',
@@ -47,7 +43,6 @@ function Place() {
     fontWeight: '600',
     lineHeight: 'normal',
   };
-
 
   return (
     <div className="Place">
@@ -92,6 +87,7 @@ function Place() {
       </section>
       <header className="Place-header">
       </header>
+      <Footer />
     </div>
   );
 }

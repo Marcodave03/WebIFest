@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
-import '../App.css';
-import '../Pages/Style/komodo.css'
-import Navbar from '../Components/navbar';
 import { initializeThree } from './logicScript/komodo';
 
 const Komodo: React.FC = () => {
-  useEffect(() => {
-    initializeThree('eventThree', 'canvasContainer','./Komodo.glb',);
-  }, []);
-  return (
-    <div id='canvasContainer'>
-      <canvas id='eventThree'></canvas>
-    </div>
-  );
-}
+    useEffect(() => {
+        initializeThree('canvasKomodo', 'containerKomodo', './Komodo.glb');
+    }, []);
+
+    return (
+        <div id='containerKomodo' style={{position: 'absolute', width: '100%',height: '100%',margin: '0', padding: '0',}}>
+            <canvas id='canvasKomodo'></canvas>
+        </div>
+    );
+};
+
 export default Komodo;

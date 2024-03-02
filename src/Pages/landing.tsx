@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import './Style/landing.css';
 import { initializeThree } from './logicScript/komodo';
 import Komodo from './Komodo';
@@ -8,7 +9,7 @@ function Landing() {
   return (
     <div className="Landing">
       <Navbar />
-      <header className="Landing-header">
+      <header className="Landing-header" style={{overflow: 'hidden'}}>
         <div id='videoContainer'>
           <video autoPlay loop muted playsInline src="./videoEntrance.mp4" id='entranceVideo'></video>
         </div>
@@ -25,6 +26,7 @@ function Landing() {
           </div>                              
         </div>      
       </header>
+      <Footer />
     </div>
   );
 }
