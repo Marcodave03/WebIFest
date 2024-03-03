@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Components/navbar';
+import Footer from '../Components/footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Style/Page.css';
 import explores from '../Assets/explore.jpg';
 import padar from '../Assets/padar.jpeg';
 import boat from '../Assets/boat-2.jpeg';
-import resort1Img from '../Assets/resort-1.jpg';
+import resort1 from '../Assets/resort-1.jpg';
+import resort2 from '../Assets/resort-2.jpg';
+import resort3 from '../Assets/resort-3.jpg';
+import resort4 from '../Assets/resort-4.jpg';
+import resort5 from '../Assets/resort-5.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules"; 
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
@@ -62,6 +67,76 @@ function Place() {
     fontWeight: '600',
     lineHeight: 'normal',
   };
+
+  const resortImg1 = {
+    backgroundImage: `url(${resort1})`,
+    width: '417px',
+    height: '540px',
+    borderRadius: '10px',
+    border: '1px solid #FFF',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+    margin: 'auto',
+  };
+
+  const resortImg2 = {
+    backgroundImage: `url(${resort2})`,
+    width: '417px',
+    height: '540px',
+    borderRadius: '10px',
+    border: '1px solid #FFF',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+    margin: 'auto',
+  };
+
+  const resortImg3 = {
+    backgroundImage: `url(${resort3})`,
+    width: '417px',
+    height: '540px',
+    borderRadius: '10px',
+    border: '1px solid #FFF',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+    margin: 'auto',
+  };
+
+  const resortImg4 = {
+    backgroundImage: `url(${resort4})`,
+    width: '417px',
+    height: '540px',
+    borderRadius: '10px',
+    border: '1px solid #FFF',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+    margin: 'auto',
+  }; 
+
+  const resortImg5 = {
+    backgroundImage: `url(${resort5})`,
+    width: '417px',
+    height: '540px',
+    borderRadius: '10px',
+    border: '1px solid #FFF',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center center',
+    margin: 'auto',
+  }; 
 
   return (
     <div className="Place">
@@ -138,7 +213,7 @@ function Place() {
         </div>
       </section>
 
-      <section>
+      <section className="hotels">
         <div className="container">
           <div className="row-1-htl">
             <p id='htlTxt'> Hotels </p>
@@ -160,32 +235,32 @@ function Place() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                <img style={resortImg1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img style={resortImg2} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                <img style={resortImg3} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                <img style={resortImg4} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                <img style={resortImg5} />
+              </SwiperSlide>
+              {/* <SwiperSlide>
+                <img style={resortImg1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                <img style={resortImg1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                <img style={resortImg1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-              </SwiperSlide>
+                <img style={resortImg1} />
+              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>
