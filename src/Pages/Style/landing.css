@@ -37,6 +37,21 @@ body{
     z-index: -2;
     position: fixed;
 }
+
+
+#bigContainer{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* 
+
+
 .landingTitle{
     
 }
@@ -82,5 +97,4 @@ body{
 
 .Komodosec{
     height:100vh;
-    width:100%;
-}
+    width:100%; */
