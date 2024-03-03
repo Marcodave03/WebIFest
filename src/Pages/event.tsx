@@ -5,12 +5,12 @@ import Footer from '../Components/footer';
 import { initializeThree } from './logicScript/komodo';
 import backImage from '../Assets/ev1.png';
 import frontImage from '../Assets/ev2.png';
+import ticketEvent from '../Assets/ticket.png';
 
 const Event: React.FC = () => {
   return (
     <div className="Event">
       <Navbar />
-      
       <section className="background-section" style={{marginBottom:300}} >
         <div style={{ backgroundImage: `url(${backImage})`, backgroundSize: 'cover', height: '40vh', position: 'relative' }}>
         </div>
@@ -18,6 +18,7 @@ const Event: React.FC = () => {
           <img src={frontImage} alt="imgg" style={{ width: "85%" }} />
         </div>
       </section>
+
       <section>
         <div className="container">
           <div className="row">
@@ -34,11 +35,46 @@ const Event: React.FC = () => {
             </div>
           </div>
         </div>
+      </section>  
+      <section className='event-2'>
+        <div className="container">
+          <div className="row">
+            <p id='titleTxt'> Explore Taka Makassar </p>
+            <img src={ticketEvent} style={{
+              width: '1700px',
+              height: '350px',
+              flexShrink: 0,
+              maxWidth: '100%',
+              marginTop: '50px'
+            }} />
+            <img src={ticketEvent} style={{
+              width: '1700px',
+              height: '350px',
+              flexShrink: 0,
+              maxWidth: '100%',
+              marginTop: '50px'
+            }} />
+            <img src={ticketEvent} style={{
+              width: '1700px',
+              height: '350px',
+              flexShrink: 0,
+              maxWidth: '100%',
+              marginTop: '50px'
+            }} />
+            <img src={ticketEvent} style={{
+              width: '1700px',
+              height: '350px',
+              flexShrink: 0,
+              maxWidth: '100%',
+              marginTop: '50px'
+            }} />
+          </div>
+        </div>
       </section>
-
-
       <Footer />
     </div>
+
+
   );
 }
 export default Event;

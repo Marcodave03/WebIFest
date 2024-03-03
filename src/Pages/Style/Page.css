@@ -17,3 +17,195 @@
 #p1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+.col {
+    display: flex;
+    align-items: center;
+}
+
+.textSection2 {
+    width: fit-content;
+    height: fit-content;
+}
+
+#img1 {
+    background: 'Assets/Padar.jepg';
+}
+
+.row-1 {
+    text-align: left;
+    margin-left: 70px;
+}
+
+.row-2 {
+    margin-left: 70px;
+    margin-top: 70px;
+    color: #000;
+    font-family: "Droid Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.row-3 {
+    color: #000;
+    font-family: ABeeZee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 70px;
+    margin-top: 60px;
+}
+
+.tripReservation {
+    background: #011C1D;
+}
+
+#tripText {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+
+#boat-img {
+    border-radius: 20px;
+}
+
+
+#boat-type {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 70px;
+}
+
+#boat-type-desc {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#price-desc {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.include-list {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+.row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.col-6-1 {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.col-6-2 {
+    margin-top: 30px;
+}
+
+#price {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 40px;
+
+}
+
+#include {
+    color: #FFF;
+    font-family: ABeeZee;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+#htlTxt {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 70.7px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.col-1-htl-img {
+    width: 417px;
+    height: 540px;
+    margin-top: 80px;
+    border: 2px solid #333;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    /* fotonya gabisa */
+    /* background-image: url("../Assets/resort-1.jpg"); */
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.event-2 {
+    background-color: #011C1D;
+}
+
+#titleTxt {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 60px;
+}
+
