@@ -10,7 +10,7 @@ function Navbar() {
     <div className="Navbar">
       {/* Updated Hamburger button with visible icon */}
       <button className={`navbar-toggler ${isSidebarOpen ? 'open' : 'close'}`} type="button" onClick={toggleSidebar}>
-        <p className="toggler-icon">{isSidebarOpen ? '✕' : '☰'}</p> {/* Toggle between hamburger and X icon */}
+        <span className="toggler-icon">{isSidebarOpen ? '✕' : '☰'}</span> {/* Toggle between hamburger and X icon */}
       </button>
       <div className={`sidebar ${isSidebarOpen ? 'show' : ''}`} style={{width: isSidebarOpen ? 'calc(210px + 10%)' : '0', transition: 'width 0.3s', height : 'auto',paddingBottom: '5vh'}}>
         <Link to="/Home" className="sidebar-link"> Home </Link>
