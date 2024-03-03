@@ -12,11 +12,8 @@ import resort2 from '../Assets/resort-2.jpg';
 import resort3 from '../Assets/resort-3.jpg';
 import resort4 from '../Assets/resort-4.jpg';
 import resort5 from '../Assets/resort-5.jpg';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules";
-
-// Import Swiper styles
+// import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules";
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
