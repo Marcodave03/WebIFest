@@ -60,3 +60,5 @@ export const initializeThree = (canvasId: string, containerId: string, modelUrl:
         renderer.setSize(container.offsetWidth, container.offsetHeight);
     });
 };
+
+

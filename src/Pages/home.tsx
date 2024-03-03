@@ -64,6 +64,7 @@ const Home: React.FC = () => {
         <h2 id="text1">Nusa Travel</h2>
         <img src={image5} alt="imgg" className = "pImg" id="beach5"/>
       </section>
+      
 
       <section ref={heroRef}  className="sec Background" id="sec" style={{zIndex:1}}>
           <div className="container" data-aos="fade-up">
@@ -93,18 +94,13 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="container" >
+      {/* <div className="container" >
         <div className="row d-flex justify-content-center">
           <div className="col text-center">
-            {/* Container for stacked elements */}
             <div className="stacked-elements">
-              {/* Outer image */}
               <img id="outsideImage" src={outside} alt="imgg" style={{ height: "700px" }} />
-              {/* Inner stacked content */}
               <div className="stacked-content">
-                {/* Inner image */}
                 <img id="insideImage" src={inside} alt="imgg" style={{ height: "550px" }} />
-                {/* Stacked text */}
                 <div className="stacked-text" style={{color:"white"}}>
                   <p>Home to diverse ethnic groups and languages</p>
                 </div>
@@ -112,7 +108,26 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className="container">
+        <div className="row">
+          <div className="col d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+            <div className="stacked-elements">
+              <img id="outsideImage" src={outside} alt="imgg" style={{ height: "auto", maxWidth: "100%" }} />
+              <div className="stacked-content">
+                <img id="insideImage" src={inside} alt="imgg" style={{ height: "auto", maxWidth: "100%" }} />
+                <div className="stacked-text" style={{ color: "white" }}>
+                  <p>Home to diverse ethnic groups and languages</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
 
          <div className="container" data-aos="fade-up">
             <div className="row">
