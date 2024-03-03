@@ -32,12 +32,15 @@ export const applyScrollingEffects = (): void => {
   const outsideImage: HTMLElement | null = document.getElementById('outsideImage');
   const insideImage: HTMLElement | null = document.getElementById('insideImage');
   const rotationFactor = 0.3;
-
+  
   if (outsideImage && insideImage) {
       window.addEventListener('scroll', () => {
           const scrollPosition: number = window.scrollY;
-          outsideImage.style.transform = `rotate(${scrollPosition * rotationFactor}deg)`;
-          insideImage.style.transform = `rotate(-${scrollPosition * rotationFactor}deg)`;
+          // Adjusting the rotation transformation to prevent position change
+          const outsideRotation = `rotate(${scrollPosition * rotationFactor}deg) translateZ(0)`;
+          const insideRotation = `rotate(-${scrollPosition * rotationFactor}deg) translateZ(0)`;
+          outsideImage.style.transform = outsideRotation;
+          insideImage.style.transform = insideRotation;
       });
   }
-};
+}  

@@ -12,7 +12,7 @@ import resort2 from '../Assets/resort-2.jpg';
 import resort3 from '../Assets/resort-3.jpg';
 import resort4 from '../Assets/resort-4.jpg';
 import resort5 from '../Assets/resort-5.jpg';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 // import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules";
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/effect-coverflow';
@@ -216,7 +216,7 @@ function Place() {
             <p id='htlTxt'> Hotels </p>
           </div>
           <div className="row-2-htl">
-            <Swiper
+            {/* <Swiper
               effect={'coverflow'}
               grabCursor={true}
               centeredSlides={true}
@@ -246,25 +246,11 @@ function Place() {
               <SwiperSlide>
                 <img style={resortImg5} />
               </SwiperSlide>
-              {/* <SwiperSlide>
-                <img style={resortImg1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg1} />
-              </SwiperSlide> */}
-            </Swiper>
+            </Swiper> */}
           </div>
         </div>
       </section>
-
-      <header className="Place-header">
-      </header>
+      <Footer/>
     </div>
   );
 }
