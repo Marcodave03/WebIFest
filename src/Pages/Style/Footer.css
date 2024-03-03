@@ -1,0 +1,32 @@
+.Footer {
+    background-color: #FFF;
+    width: 1920px;
+    height: 185px;
+    flex-shrink: 0;
+    z-index: 9999;
+    max-width: 100;
+}
+
+#ftrTxt {
+    color: #011C1D;
+    font-family: poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+}
+
+#followUs {
+    color: #011C1D;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}
+
+.vertical-line{
+    color: black;
+}
