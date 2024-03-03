@@ -24,7 +24,47 @@ function Landing() {
               <h1 id='head1' className='landingTitle'>With us</h1>
             </div>
           </div>                              
-        </div>      
+        </div>
+        <div id='page1'>
+          <div id='entrance'>
+            <div id='entranceText'>
+              <h1 id='head1' className='landingTitle'>Explore</h1>
+              <h1 id='head1' className='landingTitle'>East Nusa</h1>
+              <h1 id='head1' className='landingTitle'>Tenggara</h1>
+              <h1 id='head1' className='landingTitle'>With us</h1>
+            </div>
+          </div>                              
+        </div>  
+        <div id='page1'>
+          <div id='entrance'>
+            <div id='entranceText'>
+              <h1 id='head1' className='landingTitle'>Explore</h1>
+              <h1 id='head1' className='landingTitle'>East Nusa</h1>
+              <h1 id='head1' className='landingTitle'>Tenggara</h1>
+              <h1 id='head1' className='landingTitle'>With us</h1>
+            </div>
+          </div>                              
+        </div>  
+        <div id='page1'>
+          <div id='entrance'>
+            <div id='entranceText'>
+              <h1 id='head1' className='landingTitle'>Explore</h1>
+              <h1 id='head1' className='landingTitle'>East Nusa</h1>
+              <h1 id='head1' className='landingTitle'>Tenggara</h1>
+              <h1 id='head1' className='landingTitle'>With us</h1>
+            </div>
+          </div>                              
+        </div>  
+        <div id='page1'>
+          <div id='entrance'>
+            <div id='entranceText'>
+              <h1 id='head1' className='landingTitle'>Explore</h1>
+              <h1 id='head1' className='landingTitle'>East Nusa</h1>
+              <h1 id='head1' className='landingTitle'>Tenggara</h1>
+              <h1 id='head1' className='landingTitle'>With us</h1>
+            </div>
+          </div>                              
+        </div>        
       </header>
       <Footer />
     </div>
