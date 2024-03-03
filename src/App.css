@@ -227,6 +227,7 @@ canvas#eventThree {
 
 /* Nav */
 .Navbar {
+  z-index: 999;
   display: flex;
   align-items: center;
   z-index: 999;
@@ -243,7 +244,7 @@ canvas#eventThree {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 2;
+  z-index: 999;
 }
 
 .navbar-toggler:not(.open):hover .toggler-icon {
@@ -289,6 +290,7 @@ canvas#eventThree {
 }
 
 .sidebar.show {
+  z-index: 998;
   width: 250px;
 }
 
