@@ -1,5 +1,8 @@
 /* Temlpate */
-
+#root{
+  width: 100vw;
+  height: 100vh;
+}
 .stacked-elements {
   position: relative;
 }
