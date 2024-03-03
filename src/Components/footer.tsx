@@ -14,7 +14,8 @@ function Footer() {
             <div className="col-5">
                 <p>Nusa Travel</p>
             </div>
-            <div className="col-1" style={{backgroundColor:"black", width:"1px"}}>
+            {/* <div className="col-1" style={{backgroundColor:"black", width:"1px", height:"113px"}}> */}
+                <hr style={{backgroundColor:"black", width:"1px", height:"113px"}} />
             </div>
             <div className="col-5">
                 <div className="row">
@@ -29,7 +30,6 @@ function Footer() {
             </div>
         </div>
      </div>
-    </div>
   );
 }
 
