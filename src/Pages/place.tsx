@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../Components/navbar';
 import Footer from '../Components/footer';
 import AOS from 'aos';
@@ -12,8 +12,12 @@ import resort2 from '../Assets/resort-2.jpg';
 import resort3 from '../Assets/resort-3.jpg';
 import resort4 from '../Assets/resort-4.jpg';
 import resort5 from '../Assets/resort-5.jpg';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import SwiperCore, { EffectCoverflow, Pagination } from "swiper/modules";
+import Test1 from '../Assets/img/img1.jpg';
+import Test2 from '../Assets/img/img2.jpg';
+import Test3 from '../Assets/img/img3.jpg';
+import Test4 from '../Assets/img/img4.jpg';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -22,9 +26,67 @@ import 'swiper/css/pagination';
 
 
 function Place() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const nextRef = useRef<HTMLButtonElement>(null);
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const handleThumbnailClick = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const showSlider = (type: string) => {
+    let newIndex;
+    if (type === 'next') {
+      newIndex = currentIndex === 3 ? 0 : currentIndex + 1;
+    } else {
+      newIndex = currentIndex === 0 ? 3 : currentIndex - 1;
+    }
+    setCurrentIndex(newIndex);
+  };
+
   useEffect(() => {
-    AOS.init();
-  }, []);
+    const handleNextClick = () => showSlider('next');
+    const handlePrevClick = () => showSlider('prev');
+
+    const nextButton = nextRef.current;
+    const prevButton = prevRef.current;
+
+    if (nextButton) nextButton.addEventListener('click', handleNextClick);
+    if (prevButton) prevButton.addEventListener('click', handlePrevClick);
+
+    return () => {
+      if (nextButton) nextButton.removeEventListener('click', handleNextClick);
+      if (prevButton) prevButton.removeEventListener('click', handlePrevClick);
+    };
+  }, [currentIndex]);
+  
+// function Place() {
+//   useEffect(() => {
+//     AOS.init();
+//   }, []);
+
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const showSlider = (type: string) => {
+//     const newIndex = type === 'next' ? currentIndex + 1 : currentIndex - 1;
+//     setCurrentIndex(newIndex);
+//   };
+
+//   useEffect(() => {
+//     const nextButton = document.getElementById('next');
+//     const prevButton = document.getElementById('prev');
+
+//     if (nextButton) nextButton.onclick = () => showSlider('next');
+//     if (prevButton) prevButton.onclick = () => showSlider('prev');
+
+//     const runNextAuto = setInterval(() => {
+//       showSlider('next');
+//     }, 7000);
+
+//     return () => {
+//       clearInterval(runNextAuto);
+//     };
+//   }, [currentIndex]);
+
 
   const exploreSectionStyle = {
     backgroundImage: `url(${explores})`,
@@ -135,12 +197,14 @@ function Place() {
     margin: 'auto',
   }; 
 
+
+
   return (
     <div className="Place">
       <Navbar />
       <section className='explore' style={exploreSectionStyle}>
         <div className="container">
-          <div className="row" >
+          <div className="row">
             <div className="col d-flex">
               <div id="tagline">
                 <p data-aos="fade-up" id="p1" data-aos-duration="3000" style={{ textAlign: 'left' }}>
@@ -156,7 +220,7 @@ function Place() {
                   TO VISIT
                 </p>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </section>
@@ -164,7 +228,117 @@ function Place() {
       <section className="mostVisited">
         <div className="container">
           <div className="row">
-            <div className="col-6" style={rectangleStyle}></div>
+          <div className="carousel">
+              <div className="list">
+                  <div  className={currentIndex === 0 ? 'item active' : 'item'}>
+                      <img src={Test1}></img>
+                      <div className="content">
+                          <div className="author">LUNDEV</div>
+                          <div className="title">DESIGN SLIDER</div>
+                          <div className="topic">ANIMAL</div>
+                          <div className="des">
+                              
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                          </div>
+                          <div className="buttons">
+                          </div>
+                      </div>
+                  </div>
+                  <div className={currentIndex === 1 ? 'item active' : 'item'}>
+                      <img src={Test2}></img>
+                      <div className="content">
+                          <div className="author">LUNDEV</div>
+                          <div className="title">DESIGN SLIDER</div>
+                          <div className="topic">ANIMAL</div>
+                          <div className="des">
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                          </div>
+                          <div className="buttons">
+                          </div>
+                      </div>
+                  </div>
+                  <div className={currentIndex === 2 ? 'item active' : 'item'}>
+                      <img src={Test3}></img>
+                      <div className="content">
+                          <div className="author">LUNDEV</div>
+                          <div className="title">DESIGN SLIDER</div>
+                          <div className="topic">ANIMAL</div>
+                          <div className="des">
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                          </div>
+                          <div className="buttons">
+                          </div>
+                      </div>
+                  </div>
+                  <div className={currentIndex === 3 ? 'item active' : 'item'}>
+                      <img src={Test4}></img>
+                      <div className="content">
+                          <div className="author">LUNDEV</div>
+                          <div className="title">DESIGN SLIDER</div>
+                          <div className="topic">ANIMAL</div>
+                          <div className="des">
+                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                          </div>
+                          <div className="buttons">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div className="thumbnail">
+                  <div className={currentIndex === 0 ? 'item active' : 'item'} onClick={() => handleThumbnailClick(0)}>
+                      <img src={Test1}></img>
+                      <div className="content">
+                          <div className="title">
+                              Name Slider
+                          </div>
+                          <div className="description">
+                              Description
+                          </div>
+                      </div>
+                  </div>
+                  <div className={currentIndex === 1 ? 'item active' : 'item'} onClick={() => handleThumbnailClick(1)}>
+                      <img src={Test2}></img>
+                      <div className="content">
+                          <div className="title">
+                              Name Slider
+                          </div>
+                          <div className="description">
+                              Description
+                          </div>
+                      </div>
+                  </div>
+                  <div className={currentIndex === 2 ? 'item active' : 'item'} onClick={() => handleThumbnailClick(2)}>
+                      <img src={Test3}></img>
+                      <div className="content">
+                          <div className="title">
+                              Name Slider
+                          </div>
+                          <div className="description">
+                              Description
+                          </div>
+                      </div>
+                  </div>
+                  <div className={currentIndex === 3 ? 'item active' : 'item'} onClick={() => handleThumbnailClick(3)}>
+                      <img src={Test4}></img>
+                      <div className="content">
+                          <div className="title">
+                              Name Slider
+                          </div>
+                          <div className="description">
+                              Description
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+
+              <div className="arrows">
+                  <button ref={prevRef} id="prev">{'<'}</button>
+                  <button ref={prevRef} id="prev">{'>'}</button>
+              </div>
+              <div className="time"></div>
+          </div>
+            {/* <div className="col-6" style={rectangleStyle}></div>
             <div className='col-6'>
               <div className='row-1' style={mostVisited}>
                 <p> MOST VISITED </p>
@@ -177,7 +351,7 @@ function Place() {
                 <p> Explore rugged hills, clear waters, and stunning views in Indonesia's Komodo National Park.
                   A hidden gem for adventurers and nature lovers.</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -216,7 +390,62 @@ function Place() {
             <p id='htlTxt'> Hotels </p>
           </div>
           <div className="row-2-htl">
-            {/* <Swiper
+              <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                pagination={true}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
+              >
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      </section>
+      <Footer/>
+    </div>
+  );
+}
+
+export default Place;
+
+
+{/* <Swiper
               effect={'coverflow'}
               grabCursor={true}
               centeredSlides={true}
@@ -247,12 +476,3 @@ function Place() {
                 <img style={resortImg5} />
               </SwiperSlide>
             </Swiper> */}
-          </div>
-        </div>
-      </section>
-      <Footer/>
-    </div>
-  );
-}
-
-export default Place;
