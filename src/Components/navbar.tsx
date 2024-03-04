@@ -16,7 +16,7 @@ function Navbar() {
         <Link to="/" className="sidebar-link"> Nusa Travel </Link>
         <Link to="/Home" className="sidebar-link"> Home </Link>
         <Link to="/Place" className="sidebar-link"> Place </Link>
-        <Link to="/Event" className="sidebar-link"> Event </Link>
+        <Link to="/Event" className="sidebar-link"> Destination</Link>
         <div>
         </div>
       </div>
