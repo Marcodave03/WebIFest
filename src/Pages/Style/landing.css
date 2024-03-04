@@ -37,9 +37,11 @@ body{
     z-index: -2;
     position: fixed;
 }
+/* 
 .landingTitle{
     
 }
+
 #entrance{
     display: flex;
     align-items: center;
@@ -66,13 +68,37 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 #page1{
     display: flex;
     align-items: center;
 }
+
 #eventThree{
     border: #eee;
     border-style: solid;
     height: calc(200px + 15vw);
     width: calc(200px + 15vw);
 }
+
+.Komodosec{
+    height:100vh;
+    width:100%;
+*/
+
+
+#bigContainer {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 100%; /* Ensure the container takes up the full width */
+  }
+  
+  .text-center {
+    text-align: center; /* Center the text horizontally */
+  }
+  

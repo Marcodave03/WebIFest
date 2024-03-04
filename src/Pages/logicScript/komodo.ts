@@ -33,7 +33,7 @@ export const initializeThree = (canvasId: string, containerId: string, modelUrl:
         loader.load(modelUrl, (gltf) => {
             model = gltf.scene;
             model.scale.set(0.01, 0.01, 0.01);
-            model.rotation.set(THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(120),0)
+            model.rotation.set(THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(120),0);
             model.position.set(40,0,0);
             scene.add(model);
         }, undefined, (error) => {
@@ -59,4 +59,20 @@ export const initializeThree = (canvasId: string, containerId: string, modelUrl:
         camera.updateProjectionMatrix();
         renderer.setSize(container.offsetWidth, container.offsetHeight);
     });
+    let scrollNow = 0;
+    window.addEventListener('scroll',()=>{
+        const wScroll = window.scrollY;
+        const scrollY = wScroll - scrollNow;
+        scrollNow = wScroll;
+        console.log(wScroll);
+        if(wScroll < 781){
+            camera.position.x += scrollY * 0.08;
+            model.rotation.y -= THREE.MathUtils.degToRad(scrollY*0.32);
+            // model.rotation.set(THREE.MathUtils.degToRad(0),THREE.MathUtils.degToRad(120 - scrollY * 0.3),0);
+            // camera.position.z = camera.position.z + scrollY * 0.001;
+            // // console.log(camera.position.z);
+        }
+    })
 };
+
+

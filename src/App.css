@@ -1,6 +1,6 @@
 /* Temlpate */
 
-.stacked-elements {
+/* .stacked-elements {
   position: relative;
 }
 
@@ -8,8 +8,7 @@
   position: absolute;
   top: 80px;
   left: 375px;
-  z-index: 1; /* Ensure stacked content is behind the text */
-}
+  z-index: 1; 
 
 .stacked-elements .stacked-content .stacked-text {
   position: absolute;
@@ -20,13 +19,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2; /* Ensure text appears on top of stacked content */
+  z-index: 2;  
+
+*/
+
+
+
+.stacked-elements {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
 }
+
+.stacked-elements .stacked-content {
+  position: absolute;
+  top: calc(50% + 10px); /* Adjust according to your image height */
+  left: calc(50% + 4px); /* Adjust according to your image width */
+  transform: translate(-50%, -50%);
+  width: 500px; /* Adjust according to your image width */
+  max-width: 90%;
+  text-align: center; /* Center align text */
+  z-index: 2; /* Place inside image and text on top */
+}
+
+.stacked-elements .stacked-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+}
+
+.stacked-elements .stacked-text {
+  position: absolute;
+  top: calc(50% - 30px); /* Adjust according to your image height */
+  left: calc(50% - 120px); /* Adjust according to your image width */
+  z-index: 3; /* Place text on top of inside image */
+  color: white;
+  max-width:250px;
+}
+
+#outsideImage {
+  position: relative;
+  z-index: 1; /* Place outside image behind inside image */
+}
+
+
 
 canvas#eventThree {
   width: 100%; /* Set canvas width to 100% of viewport width */
   height: 100%; /* Set canvas height to 100% of viewport height */
 }
+
+
 
 .App {
   text-align: center;
@@ -176,7 +219,7 @@ canvas#eventThree {
 
 
 .Background {
-  background-image: radial-gradient(circle farthest-side at var(--x) var(--y), #011C1D 5%, black 100%);
+  background-image: radial-gradient(circle farthest-side at var(--x) var(--y), #011C1D 1%, black 100%);
 }
 
 .sec{
@@ -202,8 +245,11 @@ canvas#eventThree {
 
 /* Nav */
 .Navbar {
+  z-index: 999;
   display: flex;
   align-items: center;
+  z-index: 999;
+  position: fixed; /* or position: relative; */
 }
 
 .navbar-toggler {
@@ -216,7 +262,7 @@ canvas#eventThree {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 2;
+  z-index: 999;
 }
 
 .navbar-toggler:not(.open):hover .toggler-icon {
@@ -262,6 +308,7 @@ canvas#eventThree {
 }
 
 .sidebar.show {
+  z-index: 998;
   width: 250px;
 }
 
@@ -307,6 +354,61 @@ canvas#eventThree {
 /* Home */
 
 .logos {
+  padding: 60px 0;
+}
+
+.logos-slide {
+  white-space: nowrap;
+  animation: slide 35s infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 20px;
+  opacity: 0.4;
+  transition: opacity 0.3s ease; /* Add transition for smooth opacity change */
+}
+
+.logos-slide img:hover {
+  opacity: 1;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-150px * 6)); /* Adjust -150px according to the width of each image and the number of images */
+  }
+}
+
+.logos-slide1 {
+  white-space: nowrap;
+  animation: slide1 35s infinite linear; 
+}
+
+.logos-slide1 img {
+  height: 50px;
+  margin: 0 20px;
+  opacity: 0.4;
+  transition: opacity 0.3s ease; 
+}
+
+.logos-slide1 img:hover {
+  opacity: 1;
+}
+
+@keyframes slide1 {
+  from {
+    transform: translateX(calc((150px * -6))); 
+  }
+  to {
+    transform: translateX(0); 
+  }
+}
+
+
+/* .logos {
   overflow: hidden;
   padding: 60px 0;
 }
@@ -319,7 +421,12 @@ canvas#eventThree {
 
 .logos-slide img {
   height: 50px;
-  margin: 0 40px;
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+.logos-slide img:hover{
+  opacity: 1;
 }
 
 @keyframes slide {
@@ -331,7 +438,10 @@ canvas#eventThree {
   }
 }
 
-.logos-slide1 {
+*/
+
+
+/* .logos-slide1 {
   white-space: nowrap;
   display: inline-block;
   animation: slide1 35s infinite linear;
@@ -339,8 +449,13 @@ canvas#eventThree {
 
 .logos-slide1 img {
   height: 50px;
-  margin: 0 40px;
+  margin: 0 10px;
+  opacity : 0.5;
 }
+
+.logos-slide img:hover{
+  opacity: 1;
+} 
 
 @keyframes slide1 {
   from {
@@ -349,4 +464,5 @@ canvas#eventThree {
   to {
     transform: translateX(100%);
   }
-} 
+}   */
+
