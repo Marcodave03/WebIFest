@@ -12,7 +12,7 @@ function Landing() {
       <div id='videoContainer'>
         <video autoPlay loop muted playsInline src="./videoEntrance.mp4" id='entranceVideo'></video>
       </div>
-      <Canvas>
+      <Canvas style={{width:"100vw",height:"100vh"}}>
         <Experience/>
       </Canvas>
     </> 
