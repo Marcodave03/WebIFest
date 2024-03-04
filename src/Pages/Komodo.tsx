@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { initializeThree } from './logicScript/komodo';
 
+
 const Komodo: React.FC = () => {
     useEffect(() => {
         initializeThree('canvasKomodo', 'containerKomodo', './Komodo.glb');

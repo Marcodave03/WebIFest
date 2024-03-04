@@ -10,8 +10,7 @@ export function Komodo(props) {
   const scroll = useScroll();
 
   useFrame(() => {
-    ref.current.rotation.y = -scroll.offset * Math.PI * 2; // Rotate based on scroll offset
-    // ref.current.rotation.z = -scroll.offset * Math.PI * 0.2;
+    ref.current.rotation.y = -scroll.offset * Math.PI * 2; 
     ref.current.rotation.x = scroll.offset * Math.PI * 0.3;
   });
   return (
