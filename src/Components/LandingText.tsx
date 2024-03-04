@@ -10,41 +10,155 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
   return (
     <Scroll html>
       <div className="landing-text-container" style={{ zIndex: 3 }}>
-        <div id="bigContainer" className="d-flex align-items-center justify-content-center" style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
-                    <div id='page1'>
-                        <div id='entrance'>
-                        <div id='entranceText' className="text-center">
-                            <h1 className='landingTitle'>Explore</h1>
-                            <h1 className='landingTitle'>East Nusa</h1>
-                            <h1 className='landingTitle'>Tenggara</h1>
-                            <h1 className='landingTitle'>With us</h1>
+        <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6">
+                            <div id='page1'>
+                                <div id='entrance'>
+                                    <div id='entranceText' className="text-center">
+                                        <h1 style={{color:"white"}} className='landingTitle'>Explore</h1>
+                                        <h1 style={{color:"white"}} className='landingTitle'>East Nusa</h1>
+                                        <h1 style={{color:"white"}} className='landingTitle'>Tenggara</h1>
+                                        <h1 style={{color:"white"}} className='landingTitle'>With us</h1>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
-                    <div id='page1'>
-                        <div id='entrance'>
-                        <div id='entranceText' className="text-center">
-                            <h1 className='landingTitle'>Explore</h1>
-                            <h1 className='landingTitle'>East Nusa</h1>
-                            <h1 className='landingTitle'>Tenggara</h1>
-                            <h1 className='landingTitle'>With us</h1>
-                        </div>
-                        </div>
-                    </div>
+                        <div className="col-6"></div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-      </div>
+
+        <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6">
+                            <div id='page1'>
+                                <div id='entrance'>
+                                    <div id='entranceText' className="text-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6"></div>
+                        <div className="col-6">
+                        <div id='page1'>
+                            <div id='entrance'>
+                            <div id='entranceText' className="text-center">
+                                <h1 style={{color:"white"}} className='landingTitle'>Explore</h1>
+                                <h1 style={{color:"white"}} className='landingTitle'>East Nusa</h1>
+                                <h1 style={{color:"white"}} className='landingTitle'>Tenggara</h1>
+                                <h1 style={{color:"white"}} className='landingTitle'>With us</h1>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+
+            <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6">
+                            <div id='page1'>
+                                <div id='entrance'>
+                                    <div id='entranceText' className="text-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div id='page1'>
+                                <div id='entrance'>
+                                <div id='entranceText' className="text-center">
+                                    <h1 style={{color:"white"}} className='landingTitle'>Explore</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>East Nusa</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>Tenggara</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>With us</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>Explore</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>East Nusa</h1>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6">
+                        </div>
+                    </div>
+                </div>
+            </section> 
+
+            <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"40vh", width:"100vw" }}>
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6">
+                            <div id='page1'>
+                                <div id='entrance'>
+                                    <div id='entranceText' className="text-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-6">
+                            <div id='page1'>
+                                <div id='entrance'>
+                                <div id='entranceText' className="text-center">
+                                    <h1 style={{color:"white"}} className='landingTitle'>Explore</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>East Nusa</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>Tenggara</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>With us</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>Explore</h1>
+                                    <h1 style={{color:"white"}} className='landingTitle'>East Nusa</h1>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-6">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
     </Scroll>
   );
 };
