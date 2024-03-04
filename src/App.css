@@ -23,6 +23,8 @@
 
 */
 
+
+
 .stacked-elements {
   position: relative;
   width: 100%;
@@ -261,6 +263,11 @@ canvas#eventThree {
   top: 10px;
   left: 10px;
   z-index: 999;
+}
+
+.navbar-toggler:not(.open) .toggler-icon {
+  color: white; 
+
 }
 
 .navbar-toggler:not(.open):hover .toggler-icon {
