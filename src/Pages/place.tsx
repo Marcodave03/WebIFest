@@ -335,7 +335,7 @@ function Place() {
               </div>
               <div className="arrows">
                   <button ref={prevRef} id="prev">{'<'}</button>
-                  <button ref={prevRef} id="prev">{'>'}</button>
+                  <button ref={nextRef} id="prev">{'>'}</button>
               </div>
           </div>
           </div>

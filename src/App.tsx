@@ -18,7 +18,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/event" element={<Event />} />
         <Route path="/place" element={<Place />} />
-        <Route path="boat" element={<Boat />} />
+        <Route path="/boat" element={<Boat />} />
       </Routes>
     </Router>
   );
