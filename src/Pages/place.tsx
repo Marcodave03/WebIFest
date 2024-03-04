@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import Navbar from '../Components/navbar';
+import React, { useEffect } from 'react'; import Navbar from '../Components/navbar';
 import Footer from '../Components/footer';
 import {Link} from "react-router-dom"
 import AOS from 'aos';
