@@ -265,6 +265,10 @@ canvas#eventThree {
   z-index: 999;
 }
 
+.navbar-toggler:not(.open) .toggler-icon {
+  color:white;
+}
+
 .navbar-toggler:not(.open):hover .toggler-icon {
   color: black; 
   border-radius: 50%;
