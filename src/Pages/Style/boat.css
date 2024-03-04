@@ -1,0 +1,17 @@
+.boat-page {
+    background: #011C1D;
+}
+
+.boat-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
