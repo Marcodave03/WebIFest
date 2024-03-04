@@ -2,6 +2,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.secs{
+    margin:0;
+}
+
 
 #tagline {
     color: #fff;
@@ -179,7 +183,7 @@ li {
     font-size: 70px;
     font-style: normal;
     line-height: normal;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -277,7 +281,7 @@ li {
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color: #217b7e;
 }
 .carousel .list .item .buttons{
     display: grid;
