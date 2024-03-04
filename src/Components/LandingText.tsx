@@ -9,11 +9,10 @@ interface LandingTextProps {
 export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
   return (
     <Scroll html>
-      <div className="landing-text-container" style={{ zIndex: 3 }}>
-        <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
+      <div className="landing-text-container">
             <section>
                 <div className="container">
-                    <div className="row">
+                    <div className="row mt-5" >
                         <div className="col-6">
                             <div id='page1'>
                                 <div id='entrance'>
@@ -30,7 +29,7 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
                     </div>
                 </div>
             </section>
-        </div>
+
 
         <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
             <section>
@@ -114,7 +113,7 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
                 </div>
             </section> 
 
-            <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"40vh", width:"100vw" }}>
+            <div id="bigContainer"  style={{ transform: `translateY(-${scrollOffset * 100}%)`, height:"100vh", width:"100vw" }}>
             <section>
                 <div className="container">
                     <div className="row">
