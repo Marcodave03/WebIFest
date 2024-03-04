@@ -12,7 +12,7 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
 
     useEffect(() => {
         AOS.init({ 
-          duration: 3000, // Default animation duration
+          duration: 1000, // Default animation duration
           easing: 'ease', // Default easing for animations
           once: true // Whether animations should only happen once
         });
