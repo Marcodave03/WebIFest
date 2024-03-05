@@ -17,14 +17,28 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ eventsData, onEventChange }
   };
 
   return (
-    <div className="DropDownMenu">
+    <div className="DropDownMenu" style={{ backgroundColor: '#011C1D', textAlign: 'right' , width:'100%',  zIndex: 99, position: 'fixed', top: 0, right: 0 }}>
       <div className='drop-down-sidebar'>
         {eventsData.map(event => (
-          <button key={event.id} className="drop-down-sidebar-link" onClick={() => handleEventChange(event)}>{event.name}</button>
+          <button 
+            key={event.id} 
+            className="drop-down-sidebar-link" 
+            onClick={() => handleEventChange(event)}
+            style={{ 
+              backgroundColor: '#011C1D',
+              color: 'white',
+              border: 'none',
+              padding: '10px',
+              margin: '5px',
+              cursor: 'pointer',
+            }}
+          >
+            {event.name}
+          </button>
         ))}
       </div>
     </div>
-  );
+  );  
 }
 
 export default DropDownMenu;

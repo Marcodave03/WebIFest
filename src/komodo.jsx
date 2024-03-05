@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useGLTF, useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { MathUtils } from 'three';
