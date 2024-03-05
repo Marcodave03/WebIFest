@@ -1,6 +1,3 @@
-// scrollingEffects.ts
-import Home from '../home';
-
 export const applyScrollingEffects = (): void => {
   const text1: HTMLElement | null = document.getElementById('text1');
   const beach1: HTMLElement | null = document.getElementById('beach1');
@@ -9,7 +6,6 @@ export const applyScrollingEffects = (): void => {
   const beach4: HTMLElement | null = document.getElementById('beach4');
   const beach5: HTMLElement | null = document.getElementById('beach5');
   const sec: HTMLElement | null = document.getElementById('sec');
-  const scrollFactor = 0.5;
 
   if (text1 && beach1 && beach2 && beach3 && beach4 && beach5 && sec) {
     window.addEventListener('scroll', () => {
@@ -36,7 +32,6 @@ export const applyScrollingEffects = (): void => {
   if (outsideImage && insideImage) {
       window.addEventListener('scroll', () => {
           const scrollPosition: number = window.scrollY;
-          // Adjusting the rotation transformation to prevent position change
           const outsideRotation = `rotate(${scrollPosition * rotationFactor}deg) translateZ(0)`;
           const insideRotation = `rotate(-${scrollPosition * rotationFactor}deg) translateZ(0)`;
           outsideImage.style.transform = outsideRotation;

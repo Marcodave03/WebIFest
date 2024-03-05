@@ -1,17 +1,15 @@
-import React from 'react';
 import '../App.css';
 import Navbar from '../Components/navbar';
 import Footer from '../Components/footer';
-import { Link } from "react-router-dom";
 import Boat1 from '../Assets/boat-1.svg';
 
 function Boat() {
     const BoatImg1 = {
         backgroundImage: `url(${Boat1})`,
-        width: '50%', // Ukuran yang lebih kecil dari aslinya
+        width: '50%',
         height: 'auto',
-        margin: '0 auto', // Untuk memusatkan gambar di tengah
-        display: 'block', // Mengubah menjadi block agar margin auto bekerja
+        margin: '0 auto',
+        display: 'block',
     };
 
     return (
