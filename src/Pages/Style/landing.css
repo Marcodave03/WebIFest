@@ -37,6 +37,14 @@ body{
     z-index: -2;
     position: fixed;
 }
+
+#entranceText {
+    transition: color 0.3s ease; /* Add transition for the color property */
+}
+
+#entranceText.hovered {
+    color: white;
+}
 /* 
 .landingTitle{
     
@@ -101,4 +109,43 @@ body{
   .text-center {
     text-align: center; /* Center the text horizontally */
   }
+  
+  .landingTitle {
+    color: white; /* Set the default color */
+    font-size: 24px; /* Set the default font size */
+    transition: font-size 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+  .landingDescription {
+    color: white; /* Set the default color */
+    font-size: 18px; /* Set the default font size */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+    transition: font-size 0.3s ease; /* Add transition for smooth effect */
+  }
+  
+  .landingTitleWrapper {
+    padding-top: 50px; /* Adjust the padding as needed */
+  }
+  
+  /* Increase font size on hover */
+  .landingTitle:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+  }
+  
+  /* Increase font size on hover */
+  .landingDescription:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+  }
+
+  #nexts {
+    background-color: transparent;
+    color: white;
+    font-size: 120px; /* Adjust the font size as needed */
+    border: none;
+    cursor: pointer;
+  }
+  
+
   
