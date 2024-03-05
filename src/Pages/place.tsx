@@ -62,36 +62,6 @@ function Place() {
       if (prevButton) prevButton.removeEventListener('click', handlePrevClick);
     };
   }, [currentIndex]);
-  
-// function Place() {
-//   useEffect(() => {
-//     AOS.init();
-//   }, []);
-
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const showSlider = (type: string) => {
-//     const newIndex = type === 'next' ? currentIndex + 1 : currentIndex - 1;
-//     setCurrentIndex(newIndex);
-//   };
-
-//   useEffect(() => {
-//     const nextButton = document.getElementById('next');
-//     const prevButton = document.getElementById('prev');
-
-//     if (nextButton) nextButton.onclick = () => showSlider('next');
-//     if (prevButton) prevButton.onclick = () => showSlider('prev');
-
-//     const runNextAuto = setInterval(() => {
-//       showSlider('next');
-//     }, 7000);
-
-//     return () => {
-//       clearInterval(runNextAuto);
-//     };
-//   }, [currentIndex]);
-
-
   const exploreSectionStyle = {
     backgroundImage: `url(${explores})`,
     backgroundSize: 'cover',

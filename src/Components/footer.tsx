@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 import '../App.css'; // Ensure this path is correct
-import { Link } from "react-router-dom"
 import sos1 from '../Assets/sos1.png';
 import sos2 from '../Assets/sos2.png';
 import sos3 from '../Assets/sos3.png';

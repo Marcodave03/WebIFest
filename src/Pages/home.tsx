@@ -13,7 +13,6 @@ import Home1 from '../Assets/Home1.png';
 import Home2 from '../Assets/Home2.svg';
 import Home3 from '../Assets/Home3.svg';
 import inside from '../Assets/inside.png';
-import outside from '../Assets/outside.png';
 import Home4 from '../Assets/Home4.svg';
 import Count1 from '../Assets/Count1.svg';
 import Count2 from '../Assets/Count2.svg';
@@ -129,23 +128,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
-      {/* <div className="container" >
-        <div className="row d-flex justify-content-center">
-          <div className="col text-center">
-            <div className="stacked-elements">
-              <img id="outsideImage" src={outside} alt="imgg" style={{ height: "700px" }} />
-              <div className="stacked-content">
-                <img id="insideImage" src={inside} alt="imgg" style={{ height: "550px" }} />
-                <div className="stacked-text" style={{color:"white"}}>
-                  <p>Home to diverse ethnic groups and languages</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
         <div className="container">
           <div className="row">
             <div className="col d-flex justify-content-center align-items-center">
@@ -174,12 +156,9 @@ const Home: React.FC = () => {
                   See more
                 </div>
               </Link>
-
             </div>
           </div>
         </div>
-
-
         <div className="container d-flex justify-content-center">
           <div className="row">
             <div className="col-4" data-aos="fade-up">
@@ -214,7 +193,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
           <div style={{transform:"rotate(10deg)", marginTop:"250px", marginBottom:"500px"}}>
             <div className="row logos">
               <div className="logos-slide">

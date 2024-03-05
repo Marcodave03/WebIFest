@@ -21,9 +21,6 @@ import pad3 from '../Assets/pad3.svg';
 import Place2 from '../Assets/Place2.svg';
 import Place3 from '../Assets/Place3.svg';
 import Place4 from '../Assets/Place4.svg';
-
-
-// Define array containing objects for each event with their respective images, titles, and descriptions
 export interface EventData {
   id: number;
   name: string;

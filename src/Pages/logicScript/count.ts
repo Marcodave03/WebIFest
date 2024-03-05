@@ -1,7 +1,7 @@
 export function countOnScroll(
     callback: (count: number) => void,
     finalCount: number,
-    stopCallback: () => void // Callback to stop the counting process
+    stopCallback: () => void
 ) {
     let countedReached = false;
     let count = 0;

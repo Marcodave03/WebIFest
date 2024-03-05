@@ -10,7 +10,6 @@ export const Experience = () => {
     const { size } = useThree();
   
     useFrame(({ clock }) => {
-      // Update Komodo rotation based on time and scroll offset
       if (komodoRef.current) {
         komodoRef.current.rotation.y = clock.elapsedTime / 2 + scrollOffset * Math.PI * 2;
       }
@@ -18,7 +17,6 @@ export const Experience = () => {
 
     const scroll = useScroll();
   
-    // Calculate scroll offset based on scroll position and canvas height
     const handleScroll = () => {
       const newScrollOffset = scroll.offset / size.height;
       setScrollOffset(newScrollOffset);
