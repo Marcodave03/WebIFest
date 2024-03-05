@@ -7,6 +7,7 @@ import Template from './Pages/template';
 import Place from './Pages/place';
 import Event from './Pages/event';
 import Landing from './Pages/landing';
+import Boat from './Pages/boat';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/event" element={<Event />} />
         <Route path="/place" element={<Place />} />
+        <Route path="/boat" element={<Boat />} />
       </Routes>
     </Router>
   );
