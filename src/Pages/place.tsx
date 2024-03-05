@@ -2,11 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../Components/navbar';
 import Footer from '../Components/footer';
 import {Link} from "react-router-dom"
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Style/Page.css';
 import explores from '../Assets/explore.jpg';
-import padar from '../Assets/padar.jpeg';
 import boat from '../Assets/boat-2.jpeg';
 import resort1 from '../Assets/resort-1.svg';
 import resort2 from '../Assets/resort-2.svg';
@@ -62,35 +60,6 @@ function Place() {
       if (prevButton) prevButton.removeEventListener('click', handlePrevClick);
     };
   }, [currentIndex]);
-  
-// function Place() {
-//   useEffect(() => {
-//     AOS.init();
-//   }, []);
-
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const showSlider = (type: string) => {
-//     const newIndex = type === 'next' ? currentIndex + 1 : currentIndex - 1;
-//     setCurrentIndex(newIndex);
-//   };
-
-//   useEffect(() => {
-//     const nextButton = document.getElementById('next');
-//     const prevButton = document.getElementById('prev');
-
-//     if (nextButton) nextButton.onclick = () => showSlider('next');
-//     if (prevButton) prevButton.onclick = () => showSlider('prev');
-
-//     const runNextAuto = setInterval(() => {
-//       showSlider('next');
-//     }, 7000);
-
-//     return () => {
-//       clearInterval(runNextAuto);
-//     };
-//   }, [currentIndex]);
-
 
   const exploreSectionStyle = {
     backgroundImage: `url(${explores})`,
@@ -102,16 +71,6 @@ function Place() {
     alignItems: 'center',
   };
 
-  const rectangleStyle = {
-    width: '444px',
-    height: '550px',
-    backgroundSize: 'cover',
-    backgroundImage: `url(${padar})`,
-    display: 'flex',
-    marginLeft: '50px',
-    borderRadius: '20px'
-  };
-
   const tripImage = {
     width: '444px',
     height: '550px',
@@ -119,15 +78,6 @@ function Place() {
     backgroundImage: `url(${boat})`,
     display: 'flex',
     marginLeft: '20px'
-  };
-
-  const mostVisited = {
-    color: 'rgba(0, 0, 0, 0.80)',
-    textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-    fontSize: '70px',
-    fontStyle: 'normal',
-    fontWeight: '400',
-    lineHeight: 'normal',
   };
 
   const resortImg1 = {
@@ -434,34 +384,3 @@ function Place() {
 
 export default Place;
 
-{/* <Swiper
-              effect={'coverflow'}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={'auto'}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              pagination={{ clickable: true }}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <img style={resortImg1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg2} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg3} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg4} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img style={resortImg5} />
-              </SwiperSlide>
-            </Swiper> */}
