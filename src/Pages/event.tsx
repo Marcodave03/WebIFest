@@ -4,7 +4,6 @@ import Footer from '../Components/footer';
 import backImage from '../Assets/ev1.png';
 import frontImage from '../Assets/ev2.png';
 import ticketEvent from '../Assets/ticket.png';
-import DropDownEvent from '../Components/dropDownEvents';
 import DropDownMenu from '../Components/dropDownEvents';
 import Place1 from '../Assets/Place1.svg';
 import taka1 from '../Assets/taka1.svg';
