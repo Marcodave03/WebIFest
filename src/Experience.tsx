@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { ScrollControls, useScroll } from '@react-three/drei';
 import { Komodo } from './komodo';

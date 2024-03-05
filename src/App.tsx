@@ -1,9 +1,7 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Pages/home';
-import Template from './Pages/template';
 import Place from './Pages/place';
 import Event from './Pages/event';
 import Landing from './Pages/landing';
