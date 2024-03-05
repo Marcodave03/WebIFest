@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from "react-router-dom";
 import { Scroll } from '@react-three/drei';
-import '../Pages/Style/landing.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 interface LandingTextProps {
@@ -37,11 +35,11 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
                             <div id='page1'>
                                 <div id='entrance' className="d-flex justify-content-center">
                                     <div id='entranceText'>
-                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:50}} className='landingTitle'>Explore the Wonders of</h1>
-                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:80}} className='landingTitle'>Komodo Dragon &</h1>
-                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:80}} className='landingTitle'>Nusa Tenggara</h1>
-                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:80}} className='landingTitle'>Timur ( NTT ) </h1>
-                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:50}} className='landingTitle'>With Us</h1>
+                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:50}} className='landingTitle'>EXPLORE THE WONDERS OF</h1>
+                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:80}} className='landingTitle'>KOMODO DRAGON</h1>
+                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:80}} className='landingTitle'>NUSA TENGGARA</h1>
+                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:80}} className='landingTitle'>TIMUR ( NTT ) </h1>
+                                        <h1 data-aos="fade-up" style={{color:"white",fontSize:50}} className='landingTitle'>WITH US</h1>
                                     </div>
                                 </div>
                             </div>
@@ -59,9 +57,9 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
                         <div>
                             <div id='page1' className="col-6 d-flex justify-content-center" style={{marginLeft:70}}>
                                 <div id='entrance'>
-                                    <div id='entranceText' style={{color:"white"}}>
+                                    <div id='entranceText' style={{color:"white",fontSize:'calc(1vw + 10px)'}}>
                                         <div  style={{marginBottom:30}}>
-                                            <div>mbark on an expedition into the enchanting realm of Komodo, where the echoes of ancient civilizations and the majesty of nature converge in a symphony of wonder. </div>
+                                            <div>Embark on an expedition into the enchanting realm of Komodo, where the echoes of ancient civilizations and the majesty of nature converge in a symphony of wonder. </div>
                                             <div>Traverse rugged terrains that bear the footprints of prehistoric dragons, their legacy woven into the very fabric of this mythical land. Amidst lush jungles resonating with the calls of exotic birds, </div>
                                             <div>immerse yourself in an ecosystem teeming with life, each moment a testament to the enduring power of Mother Nature.</div>
                                         </div>
@@ -206,13 +204,12 @@ export const LandingText: React.FC<LandingTextProps> = ({ scrollOffset }) => {
             <section>
                 <div className="container">
                     <div className="row">
-                        <div className="col">
+                        <div className="col-11">
                             <div id='page1'>
                                 <div id='entrance'  >
-                                    <div style={{color:"white", fontSize:80}} id='entranceText' className="text-center">
-                                        Let's Dive in  
+                                    <div style={{fontSize:80}} id='entranceText' className="text-center">
+                                        <a style={{textDecoration:'none'}} id='linkToHome' href="/home">Let's Dive in</a>
                                     </div>
-                                    <button id="nexts">{'->'}</button>
                                 </div>
                             </div>
                         </div>

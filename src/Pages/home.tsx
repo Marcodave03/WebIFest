@@ -107,7 +107,7 @@ const Home: React.FC = () => {
             <div className="row d-flex justify-content center">
               <div className="col text-center">
                 <img src={Home1} alt="imgg" id="" style={{ height:"200px" }}/>
-                <p className="">Nusa Tenggara Timur</p>
+                <p className="imageDesc">Nusa Tenggara Timur</p>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
           <div className="row d-flex justify-content-center">
             <div className="col text-center">
               <img src={Home2} alt="imgg" id="" style={{ height:"200px" }}/>
-              <p>Stunning Landscape of beaches and mountains</p>
+              <p className="imageDesc">Stunning Landscape of beaches and mountains</p>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
           <div className="row d-flex justify-content-center">
             <div className="col text-center">
               <img src={Home3} alt="imgg" id="" style={{ height:"200px" }}/>
-              <p>Rich Cultural heritage and unique traditions</p>
+              <p className="imageDesc" >Rich Cultural heritage and unique traditions</p>
             </div>
           </div>
         </div>
@@ -148,16 +148,14 @@ const Home: React.FC = () => {
 
         <div className="container">
           <div className="row">
-            <div className="col d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+            <div className="col d-flex justify-content-center align-items-center">
               <div className="stacked-elements">
                 <div className="stacked-content">
                   <img id="insideImage" src={inside} alt="Inside Image" className="img-fluid" />
-                  <div className="stacked-text">
-                    <p>Home to diverse ethnic groups and languages</p>
-                  </div>
                 </div>
-                <img id="outsideImage" src={outside} alt="Outside Image" className="img-fluid" />
+                <img id="outsideImage" src={inside} alt="Outside Image" className="img-fluid" />
               </div>
+              <p className='imageDesc' id='insideText'>Home to diverse ethnic groups and languages</p>
             </div>
           </div>
         </div>
@@ -168,7 +166,7 @@ const Home: React.FC = () => {
               <img id="insideImage" src={Home4} alt="imgg" style={{ height: 400 }} />
             </div>
             <div className="col-lg-6 col-md-12" style={{marginTop:"60px"}}>
-              <h2>Explore Destination</h2>
+              <h2 className='imageDesc'>Explore Destination</h2>
               <p style={{ color: "white" }}>
                 Embarking on a journey through Nusa Tenggara Timur reveals a realm of natural marvels and vibrant cultural tapestry. From the enchanting shores of Flores to the legendary Komodo dragons, NTT beckons with its diverse landscapes and rich heritage, promising an unforgettable adventure off the beaten path.              </p>
                 <Link to="/place" style={{ textDecoration: 'none',marginTop:50 }} >
@@ -269,28 +267,28 @@ const Home: React.FC = () => {
           <div>
           <div id="counted" className="container" style={{ height: 500 }}>
             <div className="row text-center" style={{ margin: 50 }} data-aos="fade-up">
-              <h2 style={{ fontSize: 30}}>Diverse Culture, Vibrant People: Discovering Nusa Tenggara Timur</h2>
+              <h2 className='imageDesc'>Diverse Culture, Vibrant People: Discovering Nusa Tenggara Timur</h2>
             </div>
             <div className="row d-flex justify-content-center" data-aos="fade-up">
               <div className="col-4 text-center">
               <img className="image-fluid" src={Count3}  style={{objectFit:"contain", width:"auto",height:100}} id="" alt=""/>
-                <p style={{ fontSize: 15}}>{count1}+ Island</p>
+                <p className='imageDesc'>{count1}+ Island</p>
               </div>
               <div className="col-4 text-center">
                 <img className="image-fluid" src={Count2}  style={{objectFit:"contain", width:"auto",height:100}} id="" alt=""/>
-                <p style={{ fontSize: 15 }}>{count2}+ Culture</p>
+                <p className='imageDesc'>{count2}+ Culture</p>
               </div>
               <div className="col-4 text-center">
               <img className="image-fluid" src={Count1}  style={{objectFit:"contain", width:"auto",height:100}} id="" alt=""/>
-                <p style={{ fontSize: 15 }}>{count3}M+ People</p>
+                <p className='imageDesc'>{count3}M+ People</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="container" style={{marginBottom:80}}>
-          <div className="col-9" style={{marginTop:30 }}>
-            <p style={{fontSize:15}}>  
+          <div className="col-12" style={{marginTop:30 }}>
+            <p className='imageDesc' style={{fontSize:'calc(2vw)'}}>  
               Ready to dive into the wonders of Nusa Tenggara Timur (NTT)? From breathtaking landscapes to rich cultural heritage, our website is your gateway to exploring every corner of this enchanting region. Start your journey with us today and unlock the secrets of NTT!
             </p>
           </div>

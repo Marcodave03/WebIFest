@@ -27,7 +27,7 @@ export const Experience = () => {
     return (
       <>
         <ambientLight intensity={6} />
-        <ScrollControls pages={6} damping={0.25}>
+        <ScrollControls pages={6.5} damping={0.25}>
           <Komodo ref={komodoRef} />
           <LandingText scrollOffset={scrollOffset} />
         </ScrollControls>

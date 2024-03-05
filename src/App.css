@@ -1,5 +1,8 @@
-/* Temlpate */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
 /* .stacked-elements {
   position: relative;
 }
@@ -23,23 +26,29 @@
 
 */
 
-
-
-.stacked-elements {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
+.imageDesc{
+  font-size: calc(2vw + 10px);
+  text-shadow: 2px 2px 2px #07484b;
+  z-index: 999;
 }
 
-.stacked-elements .stacked-content {
+.stacked-elements {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  width: fit-content;
+  height: fit-content;       
+  justify-content: center;
+  align-items: center;                           
+  text-align: center;
+}
+
+.stacked-content {
   position: absolute;
-  top: calc(50% + 10px); /* Adjust according to your image height */
-  left: calc(50% + 4px); /* Adjust according to your image width */
-  transform: translate(-50%, -50%);
-  width: 500px; /* Adjust according to your image width */
-  max-width: 90%;
-  text-align: center; /* Center align text */
-  z-index: 2; /* Place inside image and text on top */
+  width: calc(100px + 20vw);
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
 }
 
 .stacked-elements .stacked-content img {
@@ -48,13 +57,11 @@
   max-width: 100%; /* Ensure image doesn't exceed container width */
 }
 
-.stacked-elements .stacked-text {
+#insideText{
+  text-align: center;
+  margin: 0;
+  padding: 0;
   position: absolute;
-  top: calc(50% - 30px); /* Adjust according to your image height */
-  left: calc(50% - 120px); /* Adjust according to your image width */
-  z-index: 3; /* Place text on top of inside image */
-  color: white;
-  max-width:250px;
 }
 
 #outsideImage {
@@ -252,8 +259,7 @@ canvas#eventThree {
   position: fixed; /* or position: relative; */
 }
 
-.navbar-toggler {
-  background-color: white; 
+.navbar-toggler { 
   border: none;
   padding: 10px;
   font-size: 20px;
@@ -266,8 +272,7 @@ canvas#eventThree {
 }
 
 .navbar-toggler:not(.open) .toggler-icon {
-  color: white; 
-
+  color: white; ;
 }
 
 .navbar-toggler:not(.open):hover .toggler-icon {
