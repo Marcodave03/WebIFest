@@ -1,0 +1,23 @@
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "KennethCH",
+    "password": "12345",
+    "type": "Karyawan"
+}
+
+###
+GET http://localhost:5000/users
+
+###
+POST http://localhost:5000/customer
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "name": "Kene592",
+    "email": "Kene592@gmail.com",
+    "phone": "+629182989909"
+}
